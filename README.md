@@ -164,3 +164,60 @@ social:
 ## 许可证
 
 MIT
+
+---
+
+## 自动新闻生成
+
+### OpenCode Skill
+
+项目包含一个 OpenCode skill，可用于自动生成每日云原生技术新闻文章。
+
+#### 文件位置
+
+- `skills/daily-cloud-native-news.md` - OpenCode skill 说明文档
+- `skills/daily-cloud-native-news.json` - Skill 参数定义
+- `skills/scripts/generate_daily_news.sh` - 手动生成脚本
+
+#### 使用方法
+
+**OpenCode 中使用：**
+
+```json
+{
+  "date": "2026-01-20",
+  "categories": ["cloud-native", "tech", "fintech"]
+}
+```
+
+**手动生成：**
+
+```bash
+# 生成昨天新闻的文章
+./scripts/generate_daily_news.sh
+
+# 生成指定日期的文章
+./scripts/generate_daily_news.sh 2026-01-20
+
+# 只生成特定分类
+./scripts/generate_daily_news.sh 2026-01-20 cloud-native,tech
+```
+
+#### 生成内容
+
+每篇文章包含：
+- **Front Matter**: 标题、日期、作者、原文链接、分类、标签
+- **摘要**: 关键新闻概述
+- **主要新闻**: 带来源链接的新闻条目
+- **分析**: 深度分析和行业见解
+- **结论**: 关键要点和展望
+
+#### 支持的分类
+
+| 分类 | 说明 |
+|------|------|
+| cloud-native | 云原生核心技术 |
+| tech | 科技新闻 |
+| fintech | 金融科技 |
+| politics | 政策动态 |
+| military | 军事应用 |

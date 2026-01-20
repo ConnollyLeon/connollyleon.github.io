@@ -1,0 +1,153 @@
+{
+  "name": "daily-cloud-native-news",
+  "description": "Generate daily blog posts about global cloud native technology developments, tech news, fintech news, policy developments, and military applications. Posts are formatted for Jekyll with proper front matter and include source URLs, summaries, and insightful analysis.",
+
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "type": "string",
+        "description": "The date for which to generate news posts (YYYY-MM-DD format). Defaults to yesterday."
+      },
+      "categories": {
+        "type": "array",
+        "description": "List of categories to include. Options: cloud-native, tech, fintech, politics, military. Defaults to all.",
+        "items": {
+          "type": "string",
+          "enum": ["cloud-native", "tech", "fintech", "politics", "military"]
+        }
+      }
+    }
+  },
+
+  "steps": [
+    {
+      "name": "search_news",
+      "description": "Search for news based on specified categories",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": ["cloud-native", "tech", "fintech", "politics", "military"]
+          },
+          "queries": {
+            "type": "array",
+            "description": "Search queries for this category"
+          }
+        },
+        "required": ["category"]
+      }
+    },
+    {
+      "name": "select_quality_articles",
+      "description": "Select 2-4 most significant and relevant news articles",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "articles": {
+            "type": "array",
+            "description": "Array of news articles to filter"
+          }
+        },
+        "required": ["articles"]
+      }
+    },
+    {
+      "name": "generate_jekyll_post",
+      "description": "Generate Jekyll markdown post with proper front matter and content",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "articles": {
+            "type": "array"
+          },
+          "date": {
+            "type": "string"
+          }
+        },
+        "required": ["category", "articles", "date"]
+      }
+    }
+  ],
+
+  "output": {
+    "type": "object",
+    "properties": {
+      "posts": {
+        "type": "array",
+        "description": "Array of generated post objects",
+        "items": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "description": "Category of the post"
+            },
+            "filename": {
+              "type": "string",
+              "description": "Filename for the markdown post (e.g., 2026-01-20-cloud-native-news.md)"
+            },
+            "front_matter": {
+              "type": "object",
+              "description": "Jekyll front matter",
+              "properties": {
+                "layout": {
+                  "type": "string",
+                  "const": "post"
+                },
+                "title": {
+                  "type": "string",
+                  "description": "Post title"
+                },
+                "date": {
+                  "type": "string",
+                  "description": "Publication date (YYYY-MM-DD)"
+                },
+                "author": {
+                  "type": "string",
+                  "description": "Author name"
+                },
+                "source": {
+                  "type": "string",
+                  "description": "Primary source URL for the post"
+                },
+                "categories": {
+                  "type": "array",
+                  "description": "Categories for the post"
+                },
+                "tags": {
+                  "type": "array",
+                  "description": "Tags for the post"
+                }
+              }
+            },
+            "content": {
+              "type": "string",
+              "description": "Full markdown content with summary, main news sections, analysis, and conclusion"
+            }
+          }
+        }
+      },
+      "summary": {
+        "type": "string",
+        "description": "Brief summary of all generated posts"
+      },
+      "stats": {
+        "type": "object",
+        "description": "Statistics about the generated posts",
+        "properties": {
+          "total_posts": {
+            "type": "integer"
+          },
+          "posts_by_category": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}
