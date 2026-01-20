@@ -1,0 +1,76 @@
+name: Daily Cloud Native News
+
+on:
+  schedule:
+    - cron: '0 23 * * *'  # UTC时间每天23:00，对应北京时间早上7:00
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Target date (YYYY-MM-DD), defaults to yesterday'
+        required: false
+        default: ''
+      categories:
+        description: 'Categories to generate (comma-separated)'
+        required: false
+        default: 'cloud-native,tech,fintech,politics,military'
+
+jobs:
+  generate-news:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Get target date
+        id: date
+        run: |
+          if [ "${{ github.event.inputs.date }}" != "" ]; then
+            echo "date=${{ github.event.inputs.date }}" >> $GITHUB_OUTPUT
+          else
+            echo "date=$(date -u -d 'yesterday' +%Y-%m-%d)" >> $GITHUB_OUTPUT
+          fi
+        shell: bash
+
+      - name: Generate daily news
+        uses: anomalyco/opencode/github@latest
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+        with:
+          model: opencode/minimax-m2.1-free
+          prompt: |
+            Execute the daily-cloud-native-news skill with the following parameters:
+            - date: ${{ steps.date.outputs.date }}
+            - categories: ['cloud-native', 'tech', 'fintech', 'politics', 'military']
+            
+            Search for real news articles from the past 24 hours for each category.
+            Generate complete Jekyll markdown posts following the skill instructions.
+            Return the complete JSON output with all posts.
+            
+            Write each generated post to the _posts directory with the filename format:
+            YYYY-MM-DD-category-news.md
+            
+            The skill is located in .opencode/skills/daily-cloud-native-news/
+
+      - name: Check for generated files
+        id: files
+        run: |
+          echo "count=$(git diff --name-only HEAD~1 HEAD 2>/dev/null | grep _posts | wc -l || echo 0)" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Commit and push changes
+        if: steps.files.outputs.count != '0'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add _posts/
+          git status
+          git commit -m "Update daily news $(cat _posts/*-*-*-news.md 2>/dev/null | grep -m1 '^date:' | cut -d' ' -f2 || echo ${{ steps.date.outputs.date }})" || echo "No changes to commit"
+          git push origin develop
+        shell: bash
