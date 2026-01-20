@@ -1,0 +1,57 @@
+name: Auto Review for Daily News
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  auto-approve:
+    if: github.event.pull_request.user.login == 'opencode-agent' || github.event.pull_request.user.login == 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Check if PR is from GitHub Actions
+        id: check
+        run: |
+          # 检查PR是否来自GitHub Actions
+          actor="${{ github.event.pull_request.user.login }}"
+          actor_type="${{ github.event.pull_request.user.type }}"
+          
+          # 检查是否是机器人用户（GitHub Actions创建的PR）
+          if [[ "$actor" == *"bot"* ]] || [[ "$actor" == "opencode-agent" ]]; then
+            echo "is_valid_source=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_valid_source=false" >> $GITHUB_OUTPUT
+          fi
+          
+          # 检查PR标题是否包含daily news关键字
+          title="${{ github.event.pull_request.title }}"
+          if [[ "$title" == *"daily"* ]] || [[ "$title" == *"news"* ]]; then
+            echo "is_daily_news=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_daily_news=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Auto approve and merge
+        if: steps.check.outputs.is_valid_source == 'true'
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          echo "Auto-approving PR #$PR_NUMBER created by ${{ github.event.pull_request.user.login }}"
+          
+          # 批准PR
+          gh pr review $PR_NUMBER --approve -b "Automated approval for daily news update from GitHub Actions"
+          
+          # 合并PR
+          gh pr merge $PR_NUMBER --admin --delete-branch
+          
+          echo "Successfully merged PR #$PR_NUMBER"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
