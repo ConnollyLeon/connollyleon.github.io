@@ -1,0 +1,188 @@
+---
+layout: default
+---
+
+<section class="hero-section">
+  <div class="container">
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-subtitle">{{ site.description }}</p>
+  </div>
+</section>
+
+<div class="main-content">
+  <main class="content-area">
+    <div class="section-header">
+      <h2 class="section-title">最新文章</h2>
+      <div class="section-filter">
+        <select class="filter-select" onchange="window.location.href=this.value">
+          <option value="">所有分类</option>
+          <option value="/category/cloud-native/">云原生</option>
+          <option value="/category/tech/">科技新闻</option>
+          <option value="/category/fintech/">金融科技</option>
+          <option value="/category/politics/">科技政策</option>
+          <option value="/category/military/">军事应用</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="posts-grid">
+      {% for post in site.posts %}
+      <article class="article-card">
+        <div class="article-card-header">
+          {% if post.categories %}
+          <span class="article-category">{{ post.categories | first }}</span>
+          {% else %}
+          <span class="article-category">未分类</span>
+          {% endif %}
+          <span class="article-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
+        </div>
+        <h2 class="article-title">
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <p class="article-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+        <div class="article-footer">
+          <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">阅读更多 →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="page-numbers">← 上一页</a>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+      <span class="page-numbers current">{{ page }}</span>
+      {% elsif page == 1 %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | default: '/' }}" class="page-numbers">{{ page }}</a>
+      {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', page }}" class="page-numbers">{{ page }}</a>
+      {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="page-numbers">下一页 →</a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </main>
+
+  <aside class="sidebar">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <ul class="category-list">
+        <li>
+          <a href="/category/cloud-native/">
+            云原生
+            <span class="count">{{ site.categories['cloud-native'].size | default: 0 }}</span>
+          </a>
+        </li>
+        <li>
+          <a href="/category/tech/">
+            科技新闻
+            <span class="count">{{ site.categories['tech'].size | default: 0 }}</span>
+          </a>
+        </li>
+        <li>
+          <a href="/category/fintech/">
+            金融科技
+            <span class="count">{{ site.categories['fintech'].size | default: 0 }}</span>
+          </a>
+        </li>
+        <li>
+          <a href="/category/politics/">
+            科技政策
+            <span class="count">{{ site.categories['politics'].size | default: 0 }}</span>
+          </a>
+        </li>
+        <li>
+          <a href="/category/military/">
+            军事应用
+            <span class="count">{{ site.categories['military'].size | default: 0 }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="widget">
+      <h3 class="widget-title">热门文章</h3>
+      <ul class="popular-posts">
+        {% for post in site.posts limit:5 %}
+        <li>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <span class="post-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="widget">
+      <h3 class="widget-title">标签云</h3>
+      <div class="tag-cloud">
+        {% for tag in site.tags %}
+        <a href="/tag/{{ tag[0] }}/" class="tag">{{ tag[0] }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </aside>
+</div>
+
+<style>
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.filter-select {
+  padding: 8px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.posts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.article-footer {
+  margin-top: 16px;
+}
+
+.read-more {
+  display: inline-block;
+  color: #0066cc;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.read-more:hover {
+  color: #004c99;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
+</style>

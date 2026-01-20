@@ -1,0 +1,38 @@
+# Site settings
+title: 云原生观察 | Daily Cloud Native Insights
+email: connollyleon@foxmail.com
+description: "每日云原生技术发展洞察，科技领域新闻，以及与科技发展相关的金融、政治领域动态"
+baseurl: ""
+url: "https://connollyleon.github.io"
+github_username: ConnollyLeon
+
+# Navigation
+navigation:
+  - title: 首页
+    url: /
+  - title: 云原生
+    url: /category/cloud-native/
+  - title: 科技新闻
+    url: /category/tech/
+  - title: 金融科技
+    url: /category/fintech/
+  - title: 科技政策
+    url: /category/politics/
+  - title: 军事应用
+    url: /category/military/
+  - title: 关于
+    url: /about/
+
+# Social links
+social:
+  github: connollyleon
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+sass:
+  sass_dir: _sass
+  style: compressed
+plugins_dir: _plugins
+include:
+  - _pages

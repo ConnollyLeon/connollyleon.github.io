@@ -1,0 +1,58 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ site.baseurl }}/" class="site-brand">
+      <span class="site-logo">C</span>
+      <span class="site-title">{{ site.title | split: ' | ' | first }}</span>
+    </a>
+
+    <nav class="main-navigation">
+      {% for item in site.navigation %}
+        <a href="{{ item.url | prepend: site.baseurl }}" class="nav-link">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+
+    <div class="header-actions">
+      <button class="search-toggle" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </button>
+      <button class="mobile-menu-toggle" aria-label="Menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav-overlay" id="mobile-nav-overlay">
+  <div class="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="{{ site.baseurl }}/" class="mobile-nav-brand">
+        <span class="site-logo">C</span>
+        <span class="site-title">{{ site.title | split: ' | ' | first }}</span>
+      </a>
+      <button class="mobile-nav-close" aria-label="关闭菜单">&times;</button>
+    </div>
+    <nav class="mobile-nav-menu">
+      {% for item in site.navigation %}
+        <a href="{{ item.url | prepend: site.baseurl }}" class="mobile-nav-link">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</div>
+
+<div class="search-overlay" id="search-overlay">
+  <div class="search-container">
+    <form action="/search" method="get" class="search-form">
+      <input type="text" name="q" placeholder="搜索文章..." class="search-input" autofocus>
+      <button type="submit" class="search-submit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </button>
+    </form>
+    <button class="search-close" aria-label="关闭搜索">&times;</button>
+  </div>
+</div>
