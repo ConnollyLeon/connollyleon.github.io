@@ -1,51 +1,56 @@
 ---
 layout: post
-title: "军事应用动态：国防部云计算战略与Kubernetes安全演进"
+title: "国防部云原生转型动态：Kubernetes进入IL5安全等级，军事现代化提速"
 date: 2026-01-19
 author: "防务观察"
-source: "https://militaryembedded.com/cyber/cybersecurity/dod-awards-hewlett-packard-enterprise-a-10-year-contract-for-cloud-computing-upgrades"
+source: "https://thehatchreport.substack.com/p/the-hatch-report-dod-opportunities-c85"
 categories:
   - military
 tags:
-  - defense
-  - cloud-computing
+  - DOD
   - kubernetes
-  - dod
-  - military-technology
+  - cloud-native
+  - defense
 ---
 
-# 军事应用动态：国防部云计算战略与Kubernetes安全演进
+# 国防部云原生转型动态：Kubernetes进入IL5安全等级，军事现代化提速
 
-2026年1月，美国国防部在云原生技术应用方面取得重要进展。国防信息系统局（DISA）授予HPE一份为期10年、价值9.31亿美元的云合同，推动军事敏感数据中心的现代化升级。同时，美国空军在Kubernetes环境中的身份认证管理取得突破，云原生国防技术正在加速发展。
+2026年伊始，美国国防部在云原生技术应用方面传来多项重要进展。国防部信息系统局（DISA）发布的云计算安全手册继续指导国防机构的云迁移工作，同时Kubernetes在IL5（影响等级5）安全等级的应用正在加速推广。国防部各分支机构正在积极探索将云原生技术应用于情报分析、自主系统开发等关键任务领域。
 
 ## 主要新闻
 
-### 国防部授予HPE 931亿美元云合同
+### 国防部机会更新：AI与自动化成焦点
 
-Military Embedded Systems于2026年1月报道，美国国防部授予Hewlett Packard Enterprise一份价值931亿美元、为期10年的合同，用于升级军事敏感数据中心的云计算能力。这份由国防信息系统局（DISA）签订的"分布式混合多云"合同将推动HPE Green Lake私有云平台在国防部IT环境中的全面部署。该平台将为军方提供统一管理、多租户支持等云原生功能，标志着国防部云现代化战略进入新阶段。
+The Hatch Report 1月5日发布的国防部机会更新显示，陆军、空军和海军各单位正在发布多项涉及AI和自动化技术的招标公告。其中包括：陆军AI对IT服务台运营和指标影响的信息征询、情报与自动化运营支持的软件开发与集成项目以及多域无人机系统的月度视频推介计划。这些项目反映了国防部对AI和云原生技术的持续投入。
 
-**Source:** [DoD awards Hewlett Packard Enterprise a 10-year contract for cloud computing upgrades](https://militaryembedded.com/cyber/cybersecurity/dod-awards-hewlett-packard-enterprise-a-10-year-contract-for-cloud-computing-upgrades)
+**Source:** [The Hatch Report: DoD Opportunities Update (Issue #48)](https://thehatchreport.substack.com/p/the-hatch-report-dod-opportunities-c85)
 
-### 美国空军在Kubernetes环境中简化身份认证管理
+### Kubernetes安全：2025年稳定功能与2026预览
 
-Cloud Native Now于2026年4月报道，Tetrate公司与美国空军Platform One团队合作推出了AuthService开源项目，旨在简化Kubernetes环境中的应用程序身份认证管理。该项目基于Istio服务网格边车和Kubernetes Secrets，使IT团队能够在不编写额外代码的情况下动态管理应用程序认证。团队只需为应用程序添加标签即可启用AuthService，大大降低了安全管理的复杂性。该项目使用Go语言开发，支持Open ID Connect（OIDC）标准。
+CNCF 2025年12月发布的Kubernetes安全报告虽然聚焦于稳定功能，但其内容对国防部用户具有重要参考价值。报告总结了2025年Kubernetes安全领域的重大进展，包括多项直接影响日常运维和生产环境强化的安全改进。随着Kubernetes v1.35于2025年12月发布，现在是审查过去一年进展并为2026年做准备的最佳时机。
 
-**Source:** [Tetrate Enlists USAF to Streamline Authentication in Kubernetes Environments Using Istio](https://cloudnativenow.com/news/tetrate-enlists-usaf-to-streamline-authentication-in-kubernetes-environments-using-istio/)
+**Source:** [Kubernetes Security: 2025 Stable Features and 2026 preview](https://www.cncf.io/blog/2025/12/15/kubernetes-security-2025-stable-features-and-2026-preview/)
 
-### 国防部发布多集群Kubernetes DevSecOps参考设计
+### Oracle云基础设施上的国防部IL5 Kubernetes：现代化蓝图
 
-国防部首席信息官办公室于2021年（持续产生影响）发布了多集群Kubernetes的DevSecOps参考设计，为国防部的企业级DevSecOps实践提供了标准化框架。该设计文档（编号DevSecOpsRefDesign-Multi-ClusterKubernetes）详细说明了如何在大规模Kubernetes环境中实现安全、合规和高效的运维流程。该参考设计支持国防部的软件工厂战略，推动军事软件开发的标准化和现代化，已成为指导军事云原生应用部署的关键文件。
+Ikeda Innovations 2025年10月发布的报告详细阐述了如何在Oracle云基础设施（OCI）上部署满足国防部IL5安全要求的Kubernetes集群。报告指出，IL5 Kubernetes为国防部任务平台提供了 agility、安全性和成本控制能力。Kubernetes作为"云操作系统"，抽象了底层基础设施，使团队能够跨云一致且安全地部署和管理应用程序。
 
-**Source:** [DOD DevSecOps Reference Design: Multi-cluster Kubernetes](https://dodcio.defense.gov/Portals/0/Documents/Library/DevSecOpsRefDesign-Multi-ClusterKubernetes.pdf)
+**Source:** [DoD IL5 Kubernetes on OCI OKE: Modernization Blueprint](https://ikedainnovations.com/modernizing-dod-mission-platforms-with-kubernetes-on-oracle-cloud-infrastructure-oci/)
+
+### 加速美国空军软件交付：Kessel Run案例研究
+
+INNOVIM发布的案例研究展示了云原生技术在空军关键任务系统中的应用。INNOVIM是Phantom Eagle项下Kessel Run数据科学合同的主要技术执行方，负责为空军向敏捷、软件定义的企业转型提供高影响力的DevSecOps、数据科学和云原生软件工程支持。关键技术领域包括：CI/CD流程优化、数据科学能力建设以及安全可扩展的基础设施实施。
+
+**Source:** [DoD: Case Studies - INNOVIM](https://innovim.com/who-we-serve/dod-case-studies/)
 
 ## 分析
 
-本周的军事应用新闻揭示了国防部云原生技术战略的几个关键方向。首先，HPE的931亿美元云合同标志着国防部对大规模云现代化的坚定承诺。这份长期合同表明军方正在采取战略性方法推进云转型，而非依赖零散的采购项目。Green Lake私有云平台的部署将为敏感军事环境提供所需的控制能力和安全保障，同时享受云计算的灵活性和效率优势。
+本周的国防部云原生动态揭示了防务领域技术现代化的几个关键方向。首先是Kubernetes在安全敏感环境中的应用正在成熟。IL5 Kubernetes蓝图的出现表明，经过适当的安全加固，Kubernetes已能够在处理敏感但不机密信息的国防系统中可靠运行。这一进展对于推动国防部的整体云原生转型具有里程碑意义。
 
-其次，身份认证管理的简化对于军事云原生环境具有特殊重要性。AuthService项目的开源发布不仅解决了美国空军的具体需求，也为整个国防社区提供了可复用的安全解决方案。这种基于社区的协作模式有助于加速安全最佳实践的传播，同时降低各军种重复开发类似能力的成本。Istio服务网格的采用也反映了服务网格技术在军事环境中的应用价值。
+其次是AI与云原生的融合正在国防特定场景中加速。The Hatch Report显示的多个AI相关招标项目表明，国防部正在将AI工作负载与云原生基础设施相结合。这种趋势与民用领域的发展相呼应，但具有独特的国防特色——如多域作战、边缘智能和对抗性环境下的AI部署等。
 
-最后，DevSecOps参考设计的持续完善为军事云原生应用提供了规范化指导。这些文档将安全考量嵌入到开发流程的每个阶段，体现了"安全左移"的现代安全理念。随着国防部软件工厂战略的推进，这些参考设计将继续发挥重要作用，帮助军事机构在保障安全的前提下加速软件交付。
+第三是DevSecOps实践在国防领域的深入落地。INNOVIM的案例研究展示了DevSecOps如何加速空军的软件交付能力。从代码提交到生产部署的自动化流程、持续的安全扫描和合规验证，正在成为国防部软件现代化项目的标准实践。
 
 ## 结论
 
-国防部的云原生技术应用正在进入成熟发展阶段。从大规模云基础设施投资到安全认证管理创新，国防部正在系统性地推进军事数字化转型。这些进展不仅提升了国防信息系统的能力，也为商业部门的云原生实践提供了有价值的参考。展望未来，国防与商业云原生技术的交流融合将进一步加速，共同推动技术创新和安全标准的提升。
+2026年的国防部云原生转型正在从试点走向规模化部署。IL5 Kubernetes的成熟、AI工作负载与云原生的结合以及DevSecOps的深入实践，共同构成了国防部技术现代化的三大支柱。对于参与国防技术生态的企业而言，理解这些趋势并开发符合国防部特定安全要求的产品和服务将是关键机遇。建议密切关注即将发布的国防部云计算战略更新和相关招标公告。
