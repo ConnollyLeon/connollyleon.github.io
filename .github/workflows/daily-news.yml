@@ -43,6 +43,7 @@ jobs:
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:
+          create-pr: false
           model: opencode/minimax-m2.1-free
           prompt: |
             Execute the daily-cloud-native-news skill with the following parameters:
