@@ -52,9 +52,9 @@ jobs:
           
           # 等待一下确保批准完成
           sleep 2
-          
+
           # 合并PR
-          gh pr merge $PR_NUMBER --admin --delete-branch
+          gh pr merge $PR_NUMBER --merge --delete-branch
           
           echo "Successfully merged PR #$PR_NUMBER"
         env:
