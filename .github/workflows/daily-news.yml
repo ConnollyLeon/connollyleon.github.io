@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       date:
-        description: 'Target date (YYYY-MM-DD), defaults to yesterday'
+        description: 'Target date (YYYY-MM-DD), defaults to today'
         required: false
         default: ''
       categories:
@@ -34,7 +34,7 @@ jobs:
           if [ "${{ github.event.inputs.date }}" != "" ]; then
             echo "date=${{ github.event.inputs.date }}" >> $GITHUB_OUTPUT
           else
-            echo "date=$(date -u -d 'yesterday' +%Y-%m-%d)" >> $GITHUB_OUTPUT
+            echo "date=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
           fi
         shell: bash
 
