@@ -1,63 +1,51 @@
 ---
 layout: post
-title: "金融科技动态：亚洲金融论坛聚焦合作，区块链深度集成成2026年趋势"
+title: "金融科技动态：Zerohash估值15亿美元与DeFi收益产品扩展"
 date: 2026-01-26
 author: "金融科技观察"
-source: "https://www.fintechweekly.com/news/asian-financial-forum-2026-cooperation-trade-tensions-ai-climate-finance"
+source: "https://www.pymnts.com/news/fintech-investments/2026/zerohash-eyes-1-billion-dollar-valuation-after-exiting-mastercard-deal/"
 categories:
   - fintech
 tags:
   - blockchain
-  - fintech
-  - digital-finance
+  - crypto
+  - defi
+  - investment
   - regulation
-  - institutional-adoption
 ---
 
-# 金融科技动态：亚洲金融论坛聚焦合作，区块链深度集成成2026年趋势
+# 金融科技动态：Zerohash估值15亿美元与DeFi收益产品扩展
 
-本周金融科技领域迎来重要发展。亚洲金融论坛2026在香港开幕，聚焦重建经济合作和应对市场不确定性；同时行业分析显示，金融机构将在2026年超越加密ETF，将区块链技术深度集成到核心产品栈中，标志着区块链从实验性技术向生产基础设施的重大转变。
+今日金融科技领域的重要发展集中在区块链基础设施融资和DeFi产品的民主化，显示出传统金融与去中心化金融融合的加速趋势。
 
 ## 主要新闻
 
-### 亚洲金融论坛2026聚焦合作与信任重建
+### Zerohash寻求15亿美元估值融资
 
-亚洲金融论坛2026于1月26-27日在香港举行，主题聚焦于在全球贸易紧张、AI技术和气候风险考验全球金融的背景下重建经济合作。论坛开篇强调在市场面临政治摩擦和不均衡增长信号的当下，维护政府、监管机构和金融机构之间的工作关系比乐观增长预测更为重要。论坛将讨论如何调整贸易路线、供应链和投资流动。
+区块链基础设施公司Zerohash正在讨论筹集2.5亿美元新资金，据报道该轮融资将使公司估值达到15亿美元。此前，Zerohash退出了与Mastercard的收购谈判，决定保持独立。在11月，Zerohash获得在欧洲经济区内提供受监管的加密资产和稳定币基础设施服务的许可，这为其B2B2C嵌入式加密和稳定币服务提供了支持。
 
-**Source:** [Asian Financial Forum 2026 Centers on Cooperation as Trade Tensions, AI, and Climate Risk Test Global Finance](https://www.fintechweekly.com/news/asian-financial-forum-2026-cooperation-trade-tensions-ai-climate-finance)
+**Source:** [Zerohash Eyes $1.5 Billion Valuation After Exiting Mastercard Deal](https://www.pymnts.com/news/fintech-investments/2026/zerohash-eyes-1-billion-dollar-valuation-after-exiting-mastercard-deal/)
 
-### GDX峰会2026推动沙特阿拉伯数字化转型
+### Kraken推出DeFi Earn产品
 
-GDX峰会2026于1月26-27日在沙特阿拉伯利雅得举行，这是由政府主导的平台，旨在加速沙特阿拉伯Vision 2030。峰会将汇集领导者和创新者，讨论人工智能、区块链战略、电子政府现代化、数字公共服务和云基础设施。超过500位政府和企业领导者将参与，重点关注AI采用、云基础设施、网络安全和数据治理。
+加密货币交易所Kraken在美国、欧盟和加拿大推出新的DeFi Earn产品，让用户通过简化的体验获得高达8%的APY收益。该产品使用经过审计的Veda金库，将流动性提供给链上借贷协议，用户不需要单独的钱包、额外的应用程序或复杂的工作流程。
 
-**Source:** [GDX SUMMIT 2026 | 26TH-27TH JAN 26 | SAUDI ARABIA](https://events.coinpedia.org/gdx-summit-2026-7481/)
+**Source:** [Earn up to 8% APY: Get DeFi-like rewards with a simplified experience](https://blog.kraken.com/product/defi-earn/simplified-defi-rewards)
 
-### 2026年金融机构将深度集成区块链到核心金融
+### DeFi Technologies获得英国监管批准
 
-行业分析于2026年1月7日预测，金融机构将在2026年超越加密ETF，将区块链技术直接集成到核心产品栈中。这一转变意味着区块链基础设施的深度嵌入，利用其可编程性和效率来执行超越简单代币化的功能。现代区块链现在提供亚秒级最终性、互联网级可扩展性和可预测成本，消除了基础设施性能作为瓶颈的问题。
+DeFi Technologies宣布其Valour产品获得英国金融行为监管局和伦敦证券交易所的批准，开始通过伦敦证券交易所向英国零售投资者提供特定的收益型加密ETP。获批产品包括Valour比特币实物质押（ISIN: GB00BRBV3124）和Valour以太坊实物质押（ISIN: GB00BRBMZ190）。
 
-**Source:** [2026: Institutions to Embed Blockchain Deep Into Core Finance](https://www.whalesbook.com/news/69082752063c3cf834b9cba6/Tech/2026-Institutions-to-Embed-Blockchain-Deep-Into-Core-Finance/695e9718ef4ed95998054512)
-
-### 加密资产会议2026聚焦代币化和机构采用
-
-加密资产会议2026（#CAC26）将于3月25日举行，重点关注代币化、机构加密采用、稳定币和监管框架的前沿创新。随着资本市场演变和法律清晰度进展，今年的活动将更加关注数字资产与实体经济的交叉点。会议将探讨ECB试验、欧盟DLT试点制度下的早期活动，以及稳定币在主流金融应用中的日益重要作用。
-
-**Source:** [CAC26 - Crypto Assets Conference 2026](https://fintechnews.ch/fintech-events-switzerland-europe/event/cac26-crypto-assets-conference-2026/)
+**Source:** [DeFi Technologies Announces Valour Receives UK Regulatory Approval](https://www.prnewswire.com/news-releases/defi-technologies-announces-valour-receives-uk-regulatory-approval-and-begins-offering-select-yield-bearing-crypto-etps-to-uk-retail-investors-via-the-london-stock-exchange-302669806.html)
 
 ## 分析
 
-本周的金融科技新闻揭示了几个关键趋势，对行业发展具有重要指导意义。
+今天的金融科技新闻显示了区块链和DeFi行业正在走向成熟和主流化。首先，Zerohash的高估值融资表明，尽管加密市场波动，但基础设施层面的投资仍然强劲。15亿美元的估值反映了市场对B2B嵌入式加密解决方案的需求，特别是随着传统金融机构寻求整合数字资产服务。
 
-首先，全球金融合作正在成为应对不确定性的关键策略。亚洲金融论坛的主题选择反映了在贸易紧张和技术快速变革的背景下，金融机构和监管机构更加重视建立稳定的合作关系而非追求短期增长。这种"合作优先"的理念可能会影响未来几年的金融监管政策制定和国际金融标准协调，为金融科技创新提供更加可预测的监管环境。
+其次，Kraken的DeFi Earn产品代表了DeFi民主化的重要一步。通过简化用户体验，Kraken正在降低普通投资者进入DeFi的门槛。这种模式——在保持安全性的同时简化复杂性——可能是DeFi获得更广泛采用的关键。8%的APY收益率与传统金融产品相比具有竞争力，这表明DeFi正在提供真正的价值主张。
 
-其次，区块链技术正在从"包装应用"向"核心集成"转变。关于金融机构深度集成区块链的预测表明，华尔街正在准备从根本上改变其运营骨干。与2025年看到的简单"包装"方法（如现货比特币ETF）不同，2026年将看到区块链基础设施直接嵌入核心金融产品栈。这种更深层次的集成将使基金逻辑、支付、合规和结构化产品能够以当前成本的一小部分24/7/365运行。
-
-第三，政府主导的数字化转型正在加速。GDX峰会2026的举办表明，像沙特阿拉伯这样的国家正在通过政府主导的方式推动区块链和AI技术的采用。这种自上而下的方法可能会比市场驱动的采用更快地实现大规模部署，特别是在公共服务和基础设施领域。对于金融科技公司而言，这意味着需要更加关注政府合同和公共部门合作机会。
+第三，DeFi Technologies在英国的监管批准标志着加密ETP正在获得传统金融体系的认可。通过主要交易所向零售投资者提供受监管的加密产品，这为更广泛的投资者群体打开了市场，同时提供了监管保护和传统金融渠道的便利性。
 
 ## 结论
 
-本周的金融科技新闻表明，行业正在进入更加成熟和务实的发展阶段。从全球合作到技术深度集成，我们看到了一个更加平衡和可持续的金融科技创新路径。亚洲金融论坛对合作的强调提醒我们，在充满不确定性的全球环境中，建立信任和合作关系比单纯的技术创新更为重要。
-
-区块链深度集成的趋势预示着金融基础设施的根本性变革。金融机构不再满足于表面的加密货币暴露，而是要求区块链技术能够真正改善其核心运营效率和成本结构。这种转变将为区块链技术提供商带来新的机遇和挑战，需要他们提供更加企业级、安全可靠的解决方案。
-
-随着2026年的展开，我们预期将看到更多金融机构启动区块链核心集成项目，同时政府主导的数字化转型计划将为金融科技创新提供新的动力。对于金融科技从业者而言，现在是时候关注技术如何解决实际的金融问题，而不是追求技术本身的新颖性。
+今天的金融科技发展表明区块链和DeFi正在走向主流采用。基础设施投资的持续、用户体验的简化以及监管批准的获得都是行业成熟的重要指标。对于投资者和消费者而言，这意味着更多的选择和更好的受保护的产品。随着监管框架的继续明确和基础设施的进一步完善，我们可以预期看到传统金融与DeFi之间更多创新的融合。
