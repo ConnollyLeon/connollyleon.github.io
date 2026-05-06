@@ -1,69 +1,66 @@
 ---
 layout: post
-title: "军事应用：DoD DevSecOps 与企业级云原生军事系统"
+title: "军事科技：五角大楼八家公司签署机密 AI 协议、Viasat 战术任务架构与陆军数据中心"
 date: 2026-05-05
 author: "云原生观察"
-source: "https://www.secondfront.com/resources/blog/the-dod-enterprise-devsecops-initiative-dsop-what-you-need-to-know/"
+source: "https://defensescoop.com/2026/05/01/dod-expands-classified-ai-work-with-8-companies-excluding-anthropic/"
 categories:
   - military
 tags:
-  - military
-  - dod
-  - kubernetes
-  - devsecops
-  - cloud-native
+  - DOD
+  - AI
+  - cloud-computing
+  - edge-computing
+  - defense
+  - classified-networks
 ---
 
-# 军事应用：DoD DevSecOps 与企业级云原生军事系统
+# 军事科技：五角大楼八家公司签署机密 AI 协议、Viasat 战术任务架构与陆军数据中心
 
-本周军事云原生领域的重要进展包括：美国国防部（DoD）企业 DevSecOps 计划（DSOP）持续推进，要求所有新软件项目采用基于 Kubernetes 的云原生架构和零信任安全模型；Wind River Studio Operator 宣布支持 CJADC2（联合全域指挥控制）作战行动，为战术边缘提供云原生 Kubernetes 基础设施；Ravonics 等国防承包商展示其在 IC 层级（SIPR、JWICS）的云原生平台能力。这些动向表明，云原生技术已成为现代军事系统的核心基础设施。
+美国国防部近期在人工智能和云基础设施领域动作频频。五角大楼与 SpaceX、OpenAI、Google、NVIDIA、Reflection、Microsoft、AWS 和 Oracle 八家公司签署了在机密网络（IL6 和 IL7）上部署前沿 AI 能力的正式协议；Viasat 推出战术任务架构（TMF），实现从战术边缘到企业云的无缝连接；美国陆军启动数据运营中心（ADOC），作为战场信息枢纽。这些进展反映了美军加速向"AI-first 作战力量"转型的战略决心。
 
 ## 主要新闻
 
-### DoD 企业 DevSecOps 计划（DSOP）：现代国防软件蓝图
+### 五角大楼与八家科技公司签署机密网络 AI 部署协议
 
-美国国防部企业 DevSecOps 计划（DSOP）是国防部对系统性软件交付失败的根本性回应。该计划由国防部首席信息官共同领导，最初由空军首席软件官推动，代表了国防部在构建、保护和部署软件方面的文化、技术和程序性全面改革。
+2026年5月1日，五角大楼宣布 SpaceX、OpenAI、Google、NVIDIA、Reflection、Microsoft、AWS 和 Oracle 八家美国科技公司已签署正式协议，在国防部的 IL6 和 IL7 机密网络上部署其前沿 AI 能力，用于"合法作战使用"。IL6 是处理机密云工作负载的严格合规标准，IL7 则涵盖最高机密、高度敏感或关键国家安全信息的云计算环境。该协议是五角大楼 AI 加速战略的核心，支持其在作战、情报和企业运营三大领域的创新。值得注意的是，Anthropic 因伦理争议被排除在外并被列为"供应链风险"。
 
-DSOP 的核心要求包括：
-1. **云原生基础设施**：强制使用 CNCF 认证的 Kubernetes 进行容器编排和 OCI 兼容容器。这种标准化保证了软件工作负载可以在超大规模商业云（如 AWS GovCloud）、本地 DoD 数据中心或战术边缘平台（如战斗机、海军舰艇和卫星）上无缝运行。
-2. **零信任架构**：通过 Sidecar 容器安全栈（SCSS）将零信任原则硬编码到每个集群中，在每个任务应用程序旁边自动注入安全容器，拦截所有网络流量，强制执行 mTLS，并应用严格的访问管理策略。
-3. **基础设施即代码（IaC）**：通过自动化管道实现持续集成/持续部署，将传统 18-24 个月的 ATO（操作授权）流程压缩到 90 天以内。
+**Source:** [DOD expands classified AI work with 8 companies](https://defensescoop.com/2026/05/01/dod-expands-classified-ai-work-with-8-companies-excluding-anthropic/)
 
-**Source:** [The DoD Enterprise DevSecOps Initiative (DSOP): What You Need to Know](https://www.secondfront.com/resources/blog/the-dod-enterprise-devsecops-initiative-dsop-what-you-need-to-know/)
+### Oracle 与国防部达成协议：在机密云网络部署 AI 能力
 
-### Wind River Studio Operator：推进 CJADC2 作战行动
+2026年5月1日，美国国防部与 Oracle 达成协议，在机密网络上部署 Oracle 的高级 AI 能力。Oracle 拥有10个专门服务美国政府的云区域，覆盖 DISA IL2、IL4、IL5、IL6、绝密和特殊访问计划（SAP）级别。Oracle 的 AI 战略围绕开放性、互操作性和全技术栈选择构建，使国防部能够在保持对数据控制的同时构建、部署和扩展任何模型。国防部研究与工程副部长 Emil Michael 表示，该协议提供了"安全、高性能的基础设施，用于在最敏感环境中部署和扩展 AI"。
 
-Wind River Studio Operator 为国防部联合全域指挥控制（CJADC2）任务提供支持，旨在通过 AI 在统一网络上实现近乎实时的决策优势，该网络连接所有武装部队的数据库、传感器、武器和作战人员。
+**Source:** [Department of War Announces Agreement with Oracle](https://www.oracle.com/news/announcement/the-department-of-war-announces-agreement-with-oracle-to-deploy-ai-capabilities-on-classified-cloud-networks-2026-05-01/)
 
-Studio Operator 提供分布式、云原生 Kubernetes 基础设施，用于在地理分布式部署中托管战术工作负载，即使在间歇性和连接降级的情况下也能实现集中管理的子云。其核心能力包括：
+### Viasat 推出战术任务架构：边缘到云的连接革新
 
-- **云原生设计**：Studio Cloud Platform 提供软件定义、云原生基础设施，专为高可用性地理分布式操作而强化。对容器和 Kubernetes 的支持是平台的基本要求。
-- **小 footprint**：Studio Cloud Platform 可以扩展到小于许多传统平台，适合资源受限的战术环境。
-- **可靠性/可用性**：Studio Operator 旨在通过高级故障检测和自动故障解决实现六九（99.9999%）可用性。
-- **大规模自动化**：从 0-1 天部署到 2 天运营，所有操作都实现自动化。
+Viasat 于2026年4月23日推出战术任务架构（Tactical Mission Fabric, TMF），这是一个全面的边缘到云网络覆盖层，可无缝增强现有军事战术网络。TMF 将多路径连接、Mesh 网络和分布式云计算结合，使作战人员即使在最具对抗性的环境中也能更快地将数据转化为决策。在战术边缘，TMF 利用 NetAgility 实现多路径传输和 Mesh 网络，在电子战和网络攻击中提供自动无缝故障转移。TMF 将标准战术网关和边缘计算转变为经过认证的战区内云节点，支持实时 AI/ML 分析，并通过双层层加密和持续监控实现零信任目标。
 
-**Source:** [Advancing CJADC2 Operations with Wind River Studio Operator](https://www.windriver.com/resource/studio-operator-for-DoD-ABMS-and-JADC2)
+**Source:** [Viasat Transforms Tactical Defense Networks](https://www.viasat.com/news/latest-news/government/2026/viasat-tactical-mission-fabric-edge-to-cloud-connectivity/)
 
-### 情报社区层级的 Kubernetes：OpenShift、RKE2 与实际部署
+### 美国陆军启动数据运营中心（ADOC）
 
-在情报社区（IC）和 DoD 部分运营的机密和特殊访问环境中（SIPR、JWICS、AWS Secret Region、Azure Secret 等），Kubernetes 已成为新服务交付的默认方式，但在约束条件下运行，这些约束显著塑造了架构。
+美国陆军于2026年4月3日启动数据运营中心（Army Data Operations Center, ADOC），作为军方庞大信息库与战场指挥官和士兵之间的信息枢纽。该中心隶属于陆军网络司令部，计划作为期六个月的试点，五角大楼可能将其采纳为推广模式。ADOC 旨在解决不同数据集分离、需要不同安全许可或存储在不同系统中的问题。虽然数据在军事中有多种用途，陆军特别强调其在战场决策（如目标定位）中的应用。此外，国防部已在四个美国军事基地（Dugway、Fort Bliss、Fort Hood、Fort Bragg）推进商业数据中心合同。
 
-目前，OpenShift 是 IC 企业的标准，RKE2（Rancher Kubernetes Engine 2）在 DoD 边缘和 IC 项目中的存在感日益增长。OpenShift 提供强大的集成（身份验证、注册表、监控、SDN、操作员框架）、STIG 支持、FIPS-140 模式；RKE2 则提供较小的攻击面和默认强化的配置（CIS Kubernetes Benchmark 预设）。
+**Source:** [Army debuts data operations center](https://www.c4isrnet.com/industry/techwatch/2026/04/10/army-debuts-data-operations-center-to-serve-as-information-hub/)
 
-在生产联邦集群中，通常使用批准的 WAF 和到服务网格的 mTLS 来前置入口。网络策略默认为拒绝所有流量，仅允许明确许可的 pod 间通信。
+### 战术边缘的 AI 作战化：2026 国防战略的实践
 
-**Source:** [Kubernetes in the IC Tier: OpenShift, RKE2, and What Actually Runs](https://precisionfederal.com/insights/kubernetes-in-the-ic-tier)
+2026年国防战略（NDS）明确将国防部的重心转向"战斗、胜利并由此威慑真正重要的战争"，强调回归"战士精神"。在战术边缘，AI 的部署面临被拒绝、断开、间歇性和有限带宽（D-DIL）环境的挑战。为此，陆军正在推进 ruggedized 边缘 AI 硬件、算法模型压缩（将32位浮点数转为8位整数，减少75%内存占用）以及 Project Linchpin 可信治理框架。XVIII 空降军团正在通过其运营数据团队（ODTs）实践类似 TORC 的方法论，直接向作战人员开发和部署数据驱动工具。
+
+**Source:** [Operationalizing AI at the Tactical Edge](https://www.lineofdeparture.army.mil/Journals/Warrant-Officer-Journal/Archive/March-2026/Operationalizing-AI-at-the-Tactical/)
 
 ## 分析
 
-国防部 DevSecOps 计划（DSOP）的推进标志着军事软件采购和部署模式的根本性转变。从传统的"瀑布式"开发（3-10 年交付周期）转向持续的、自动化的 DevSecOps 管道，这不仅提高了软件交付速度，更重要的是提升了作战系统的适应性和响应能力。在快速变化的威胁环境中，能够以天为单位而非年为单位更新作战软件，是获得决策优势的关键。
+五角大楼与八家科技公司签署机密 AI 部署协议是2026年国防科技领域最引人注目的事件之一。这一协议的意义不仅在于技术的部署，更在于它所反映的战略转变：AI 正在从实验性能力转变为合法的作战工具。IL6 和 IL7 级别的部署意味着 AI 模型将在处理机密和绝密信息的环境中运行，这要求模型供应商在性能和安全之间找到新的平衡。
 
-Kubernetes 在军事系统中的广泛应用反映了云原生技术的成熟度和可靠性。从 F-16 战斗机到海军舰艇，从战术边缘到机密数据中心，Kubernetes 提供了统一的编排层，使得应用可以在不同安全级别和环境之间无缝迁移。特别是 Wind River Studio Operator 对 CJADC2 的支持，展示了云原生架构如何满足最苛刻的战术需求：在连接断开、资源受限和高可靠性要求的环境中运行。
+Anthropic 被排除在外并被列为"供应链风险"的事件引发了广泛讨论。据报道，这源于 Anthropic 与五角大楼就 Claude 模型在某些作战行动中的应用方式产生的分歧。这一事件凸显了 AI 伦理在军事应用中的复杂性：AI 公司如何在商业道德承诺与国防合同要求之间取得平衡？五角大楼的策略是确保多元化的供应商组合——包括开源和专有模型——以避免对单一供应商的依赖。这也表明，未来的军事 AI 供应链将更加注重供应商多样性和可控性。
 
-然而，军事云原生部署也面临着独特的挑战。首先，安全合规要求极高：STIG 强化镜像、FIPS-140 认证、零信任网络策略等都是强制性要求，这大大增加了系统复杂性。其次，在多层级安全环境（IL2 到 IL6+）中运行的集群需要精细的隔离和跨域解决方案。第三，在战术边缘部署的 Kubernetes 集群必须能够在完全断开连接的情况下自主运行数周甚至数月，这对集群的自愈能力和资源管理提出了极高要求。
+Viasat 的战术任务架构（TMF）代表了另一个重要方向：将云计算能力延伸到战术边缘。在 DDIL 环境中，传统的"回传"到集中式数据中心的模式是不可行的。TMF 通过在边缘部署计算节点，使 AI/ML 分析能够在数据收集点进行，而不是等待回传。这种分布式架构与美军的联合全域指挥控制（JADC2）愿景高度契合。与 AWS 和 Accelint 的联合演示进一步表明，商业云基础设施与战术网络的集成正在从概念验证走向实战部署。
 
-从战略角度看，云原生技术正在成为军事技术优势的新基石。正如 DoD 的案例研究所示，采用 Kubernetes 和 DevSecOps 后，软件发布时间从 3-8 个月缩短到 1 周，ATO 获取时间从数月缩短到数天。这种敏捷性不仅提高了作战效率，也改变了军事技术创新的经济学：现在可以进行更频繁的实验和迭代，而不必担心漫长的采购周期。
+陆军数据运营中心（ADOC）的启动则是一个组织层面的创新。长期以来，军方的数据分散在不同的系统中，需要不同的安全许可，难以实现跨域整合。ADOC 作为信息枢纽，试图解决这一根本性问题。六个月的试点期表明，军方正在以敏捷的方式探索数据整合的新模式。如果成功并被五角大楼采纳，ADOC 可能成为全军数据架构的范本。
 
 ## 结论
 
-本周的军事云原生动态表明，Kubernetes 和 DevSecOps 已成为现代国防系统的标准基础设施。从 DoD 的 DSOP 计划到 Wind River 的 CJADC2 支持，云原生技术正在重塑军事软件的构建、部署和运营模式。对于国防承包商和军事软件开发团队来说，掌握云原生技术不再是可选技能，而是参与未来国防项目的必要条件。随着 2026 年更多军事系统向云原生架构迁移，我们可以期待看到更先进的战术边缘计算、更智能的自主系统和更敏捷的作战软件生态。那些能够快速适应这一转变的组织，将在未来的国防技术竞争中占据领先地位。
+2026年5月初的军事科技动态描绘了一幅清晰的图景：美军正在全面加速 AI 和云计算的作战化部署。从五角大楼与八家科技公司的机密网络协议到 Viasat 的战术边缘架构，从陆军数据运营中心到战术 AI 的实战化，这些进展都指向同一个目标——将美军打造为"AI-first 的作战力量"。对于国防工业和云原生从业者而言，这意味着几个关键机遇：IL6/IL7 级别的云服务需求将持续增长；战术边缘的分布式云计算将成为新的市场；AI 模型在军事环境中的部署将催生新的安全和合规标准。同时，AI 伦理和供应链多样性问题也将成为行业必须面对的挑战。随着这些项目的推进，我们预计2026年下半年将出现更多关于军事 AI 部署的实质性进展和实战应用案例。

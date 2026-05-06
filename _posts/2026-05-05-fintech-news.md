@@ -1,70 +1,73 @@
 ---
 layout: post
-title: "金融科技动态：代币化证券与稳定币结算基础设施加速发展"
+title: "金融科技动态：Bullish 42亿美元收购、Western Union 稳定币与 Visa 链上结算"
 date: 2026-05-05
 author: "云原生观察"
-source: "https://www.coindesk.com/business/2026/05/04/wall-street-giant-dtcc-plans-tokenized-securities-platform-with-july-pilot-october-launch"
+source: "https://www.bloomberg.com/news/articles/2026-05-05/crypto-exchange-bullish-to-buy-equiniti-in-4-2-billion-deal"
 categories:
   - fintech
 tags:
-  - fintech
-  - blockchain
+  - cryptocurrency
   - stablecoin
-  - tokenization
-  - digital-assets
+  - blockchain
+  - payments
+  - DeFi
 ---
 
-# 金融科技动态：代币化证券与稳定币结算基础设施加速发展
+# 金融科技动态：Bullish 42亿美元收购、Western Union 稳定币与 Visa 链上结算
 
-本周金融科技领域迎来多项重磅消息：华尔街清算巨头 DTCC 宣布将于 7 月启动代币化证券试点并于 10 月正式推出平台；Visa 将其稳定币结算试点扩展至 9 个区块链，年化结算运行率达到 70 亿美元；Western Union 选择 Fireblocks 为其首个稳定币 USDPT 提供基础设施支持。这些进展表明，传统金融与区块链基础设施的融合正在加速，代币化和稳定币正成为下一代金融结算的核心。
+2026年5月5日，金融科技领域迎来密集的重磅消息。加密货币交易所 Bullish 宣布以42亿美元收购 Equiniti；Western Union 推出基于 Solana 的美元支付稳定币 USDPT；Visa 与 Wealthsimple 在加拿大试点 USDC 稳定币结算；Lightspark 与 Visa 合作推出支持稳定币和比特币的借记卡。此外，Securitize、Jump Trading 和 Jupiter 联合推出全链上受监管的股票代币交易。这些动态标志着传统金融与加密基础设施的融合正在加速。
 
 ## 主要新闻
 
-### DTCC 设定 10 月代币化证券平台发布日期
+### Bullish 以42亿美元收购 Equiniti，布局区块链资本市场基础设施
 
-华尔街清算巨头美国存管信托和结算公司（DTCC）周一表示，将于 7 月开始有限的代币化证券生产交易，并于 10 月更广泛地推出其平台。该服务在 DTCC 的存管信托公司内构建，允许公司在保持相同所有权和 proteção 的情况下发行已在托管中的资产的数字版本。
+加密货币交易所 Bullish 同意以42亿美元从 Siris Capital 手中收购 Equiniti，其中包含约23.5亿美元股票和18.5亿美元债务承担。该交易预计将于2027年1月完成，Siris 拥有购买 Equiniti 非核心业务线的选择权。Bullish 此举旨在扩展其在区块链驱动资本市场基础设施领域的布局，将其交易平台与 Equiniti 的资本市场服务能力相结合。
 
-该系统是在与包括 BlackRock、Goldman Sachs、JPMorgan 以及 Anchorage 和 Circle 等加密原生公司在内的 50 多家公司合作下形成的。DTCC 处于美国市场的中心，每天处理数万亿美元的交易，并托管超过 114 万亿美元的证券。
+**Source:** [Crypto Exchange Bullish to Buy Equiniti In $4.2 Billion Deal](https://www.bloomberg.com/news/articles/2026-05-05/crypto-exchange-bullish-to-buy-equiniti-in-4-2-billion-deal)
 
-代币化——在区块链上表示股票或债券等资产的过程——已引起传统金融机构越来越多的兴趣。倡导者表示，它可以缩短结算时间、降低成本并为新参与者开放市场。
+### Western Union 推出 USDPT 稳定币，迈向数字优先金融基础设施
 
-**Source:** [DTCC sets October launch for tokenized securities platform in Wall Street blockchain push](https://www.coindesk.com/business/2026/05/04/wall-street-giant-dtcc-plans-tokenized-securities-platform-with-july-pilot-october-launch)
+Western Union 推出了名为 USDPT 的美元计价支付稳定币，由联邦监管加密银行 Anchorage Digital Bank 发行，基于 Solana 区块链构建。该稳定币旨在与现有支付系统协同运作，支持多个用例：全球交易所购买支持、连接持牌交易所与托管人的数字资产网络、面向消费者的"Stable by Western Union"支出功能（计划2026年在40+国家推出），以及 Treasury 和 Agent 结算（实现近即时、全天候结算）。Fireblocks 将提供核心基础设施支持。
 
-### Visa 新增五个区块链支持稳定币结算
+**Source:** [Western Union debuts USDPT stablecoin for payments](https://www.electronicpaymentsinternational.com/news/western-union-debuts-usdpt-stablecoin/)
 
-Visa 宣布在其全球稳定币结算试点中增加五个区块链，扩展发卡机构和收单机构与网络的结算方式。随着稳定币进入主流支付流，Visa 的稳定币结算试点现在支持 9 个区块链，年化运行率达到 70 亿美元，较上季度增长 50%。
+### Visa 与 Wealthsimple 在加拿大试点稳定币结算
 
-Visa 新增支持的五个区块链包括：
-- **Arc**：由 Circle 创建的开源 Layer-1 区块链，旨在将可编程货币和链上创新与真实世界经济活动相结合。
-- **Base**：由 Coinbase 提供支持的高性能区块链，实现稳定币、链上资产和智能体商务的快速、低成本结算。
-- **Canton**：为受监管资本市场构建的可配置隐私，支持机构用例的合规结算。
-- **Polygon**：领先的区块链支付解决方案，实现快速、低成本交易。
-- **Tempo**：专注于更快、私密和更高效的稳定币流动性和结算流。
+Visa 加拿大与 Wealthsimple 宣布合作，首次将稳定币结算引入加拿大市场。通过该试点，Wealthsimple 现在可以使用 USDC 满足对 Visa 加拿大的部分结算义务。此举支持七天连续结算（超越传统的五天结算周期），为下一代流动性管理奠定基础。Visa 的全球稳定币结算年化运行率已超过70亿美元，加拿大是该试点计划进入的最新市场。
 
-Visa 现在在其全球稳定币结算试点计划中支持 9 个区块链——已经利用 Avalanche、Ethereum、Solana 和 Stellar。
+**Source:** [Visa Canada and Wealthsimple Pilot Stablecoin Settlement](https://www.globenewswire.com/news-release/2026/05/05/3287937/0/en/Visa-Canada-and-Wealthsimple-Pilot-Stablecoin-Settlement-in-Canada.html)
 
-**Source:** [Visa adds five blockchains for stablecoin settlement](https://corporate.visa.com/en/sites/visa-perspectives/newsroom/visa-expands-stablecoin-settlement-adds-five-blockchains.html)
+### Securitize、Jump Trading 与 Jupiter 推出全链上受监管股票代币交易
 
-### Western Union 选择 Fireblocks 支持其首个稳定币 USDPT
+Securitize 与 Jump Trading Group 和 Jupiter 合作，在 Solana 上实现了全链上、受监管的股票代币交易。Jump 通过其部署在 Solana 上的 PropAMM 提供流动性，Jupiter 作为用户端入口允许投资者通过熟悉的 DeFi 界面发现和交易代币化股票，而 Securitize 则以受监管的经纪商、ATS 和转让代理基础设施提供底层支撑。该系统在现有证券法规框架内运行，符合 SEC 对代币化证券的指导原则。Securitize 管理的代币化资产已超过40亿美元。
 
-Western Union（纽约证券交易所代码：WU）宣布已选择 Fireblocks 为其首个美元支持的稳定币 USDPT 提供核心基础设施。Fireblocks 的平台以及最近被 Fireblocks 收购的 Dynamic 嵌入式钱包和 TRES 金融平台，将支持 Western Union 今年通过其全球网络以 USDPT 与代理机构进行结算。
+**Source:** [Securitize, Jump Trading Group, and Jupiter Launch Fully Onchain Trading](https://www.prnewswire.com/news-releases/securitize-jump-trading-group-and-jupiter-launch-fully-onchain-regulated-trading-for-tokenized-equities-302762248.html)
 
-USDPT 承载着 Western Union 的遗产，Fireblocks 提供让 Western Union 大规模运营 USDPT 的能力。Fireblocks 作为国库桥梁，让 Western Union 能够端到端控制 USDPT 从国库运营到出纳员和消费者的流动。该平台提供托管、政策控制和用于发行和移动的支付引擎，Fireblocks Network 将 Western Union 连接到 100 多个国家/地区的 2,400 多家机构交易对手方进行流动性和结算。
+### Lightspark 与 Visa 合作推出全球稳定币和比特币借记卡
 
-USDPT 运营将在菲律宾和玻利维亚两个市场初步推出，并于 2026 年在 Western Union 的全球网络内扩展。此举与 Western Union 现代化其结算基础设施并加强其作为全球支付行业向链上转移时的竞争地位的更广泛战略相一致。
+Lightspark 宣布与 Visa 合作，在100多个国家推出支持稳定币和比特币的 Visa 借记卡。通过 Lightspark 的 Grid 平台，金融机构和金融科技开发者可以提供直接关联到持卡人稳定币余额、法币账户或比特币持仓的 Visa 借记卡。卡片可通过 USDC 等稳定币（支持 Solana、Base 和 Spark 链）、Bitcoin（通过 Spark 闪电网络）以及法币进行充值。Lightspark 的 Grid 已支持向65+国家的银行账户进行实时法币和稳定币支付。
 
-**Source:** [Western Union Selects Fireblocks to Power its First Stablecoin, USDPT](https://www.prnewswire.com/news-releases/western-union-selects-fireblocks-to-power-its-first-stablecoin-usdpt-302760774.html)
+**Source:** [Lightspark Partners With Visa to Bring Stablecoin and Bitcoin-Linked Debit Cards Worldwide](https://financialit.net/news/blockchain/lightspark-partners-visa-bring-stablecoin-and-bitcoin-linked-debit-cards-worldwide)
+
+### Anchorage Digital 探索无现金储备模型，优化机构稳定币流动性
+
+Anchorage Digital 正在探索一种新的稳定币发行模型，利用即时流动性满足赎回需求，优化金库管理和收益机会。该模型将在 Solana 上持有产生收益的低风险代币化工具，而非静态现金缓冲。Anchorage Digital 正与摩根大通资产管理公司合作探索潜在的代币化工具解决方案。目前，该公司是 Tether 美国稳定币、Ethena 和 Western Union USDPT 的受监管发行方，同时也是 BlackRock BUIDL 的托管通道。
+
+**Source:** [Anchorage Digital Pursues More Efficient Institutional Stablecoin Liquidity](https://www.pymnts.com/cryptocurrency/2026/anchorage-digital-pursues-more-efficient-institutional-stablecoin-liquidity/)
 
 ## 分析
 
-本周金融科技领域的三大事件共同描绘了一个清晰的趋势：传统金融基础设施正在快速拥抱区块链和代币化技术。DTCC 的代币化证券平台计划是最具标志性的，因为 DTCC 作为美国证券清算的核心基础设施提供商，其行动具有系统重要性。从 7 月的试点到 10 月的全面推出，这一时间表反映了监管机构（通过 SEC 不行动函）和市场参与者对代币化技术的认可。
+今天的金融科技新闻揭示了一个明确趋势：稳定币正在从边缘加密资产转变为主流金融基础设施的核心组成部分。Western Union、Visa、Wealthsimple、Lightspark 等传统金融巨头的密集行动表明，稳定币的价值主张——即时结算、全天候运营、降低流动性摩擦——正在被传统金融机构广泛接受。
 
-Visa 的稳定币结算扩展则展示了支付巨头对多链未来的押注。从 4 个区块链扩展到 9 个，年化 70 亿美元的运行率，这些数据表明稳定币结算已不再是实验性项目，而是正在成为支付基础设施的重要组成部分。特别值得注意的是，Visa 选择的区块链（Arc、Base、Canton、Polygon、Tempo）代表了不同的技术路线和应用场景，从机构合规（Canton）到消费级支付（Base），这种多元化策略有助于降低技术风险。
+Western Union 推出 USDPT 是最具象征意义的事件之一。这家拥有百年历史的汇款公司选择 Solana 作为底层链，而非自己构建区块链，表明传统金融机构正加速采用现有的高性能区块链基础设施。Solana 的高吞吐量和低延迟设计使其成为实时支付结算的理想选择。同时，选择 Anchorage Digital Bank 作为发行方，反映了传统金融对受监管托管通道的偏好。
 
-Western Union 的 USDPT 稳定币项目则反映了汇款和跨境支付领域的创新压力。作为一个拥有 150 年历史的传统汇款公司，Western Union 面临着数字原生支付公司的激烈竞争。通过推出稳定币并结合 Fireblocks 的基础设施，Western Union 试图在菲律宾和玻利维亚等银行服务不足的市场中提供更快速、低成本的美元访问渠道。这种"稳定币 + 传统金融网络"的模式，可能为其他传统金融机构提供转型参考。
+Visa 与 Wealthsimple 在加拿大的稳定币结算试点同样具有标志性意义。Visa 的全球稳定币结算年化运行率已超过70亿美元，涵盖拉美、欧洲、亚太等多个市场。稳定币结算正在从实验性项目转变为可规模化的生产系统。七天连续结算的推出，更是对传统五天结算周期的直接挑战——在全球化的数字经济中，资本不应该在周末"休眠"。
 
-从更宏观的视角来看，这些发展表明"一切交易所"（everything exchange）的概念正在成为现实——股票、债券和数字资产将在共享基础设施上交易。代币化不仅提高了结算效率，还创造了新的市场机会，例如 24/7 交易、 fractional ownership 和跨链流动性。然而，这也带来了新的挑战，包括监管协调、技术标准统一和风险管理。
+Securitize、Jump 和 Jupiter 的全链上股票代币交易则代表了另一个维度的创新：将传统证券市场结构（包括 Reg NMS 合规）与区块链结算效率相结合。这种"在现有监管框架内运行"的方法为代币化证券的规模化提供了一条可行路径，避免了与监管机构的直接对抗。
+
+Bullish 以42亿美元收购 Equiniti 的交易规模令人瞩目。这表明，加密货币交易所正在从单纯的交易平台向全面的资本市场基础设施提供商转型。区块链驱动的资本市场不再是一个"未来概念"，而是正在被大型机构用真金白银押注的现实。
 
 ## 结论
 
-本周的金融科技动态表明，代币化和稳定币正从边缘创新走向主流金融基础设施。DTCC 的平台、Visa 的多链扩展和 Western Union 的稳定币推出，共同预示着一个更高效、更包容的金融系统的到来。对于金融机构来说，现在是制定代币化战略的关键时刻——不仅要关注技术实施，更要理解新的商业模式和监管环境。随着 2026 年下半年这些项目的落地，我们将看到代币化证券和稳定币结算从概念验证转向规模化应用，这将深刻改变全球金融市场的运作方式。
+2026年5月5日的金融科技动态描绘了一幅清晰的图景：稳定币和区块链正在深度融入传统金融体系。从 Western Union 的支付稳定币到 Visa 的链上结算，从股票代币的全链上交易到加密货币交易所收购传统资本市场基础设施，这些发展不再是孤立的实验，而是相互关联的生态系统演进。对于从业者而言，关注点应从"区块链是否会颠覆传统金融"转向"传统金融如何拥抱区块链"。Solana 作为高性能链的选择、Anchorage Digital 作为受监管托管通道的角色、以及各机构在合规框架内的创新实践，都为理解未来金融科技的发展路径提供了重要线索。
