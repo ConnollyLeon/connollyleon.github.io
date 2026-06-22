@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "category": "cloud-native",
+      "filename": "2026-06-22-cloud-native-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "云原生动态：OpenTelemetry毕业成为可观测性标准，Kubernetes 1.36 AI调度能力成熟",
+        "date": "2026-06-22",
+        "author": "云原生观察",
+        "source": "https://www.cncf.io/announcements/2026/05/21/cloud-native-computing-foundation-announces-opentelemetry-graduation/",
+        "categories": ["cloud-native"],
+        "tags": ["opentelemetry", "kubernetes", "cncf", "ai", "dgpu-scheduling", "digital-sovereignty", "observability", "cloud-native"]
+      },
+      "content": "云原生领域多项里程碑事件：OpenTelemetry正式毕业成为可观测性标准；Kubernetes 1.36发布70项增强，AI调度能力全面成熟；CNCF CTO展望十年发展路径；数字主权架构模式探讨。"
+    },
+    {
+      "category": "tech",
+      "filename": "2026-06-22-tech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "科技动态：Anthropic Fable 5出口管制持续，OpenAI推出GPT-5.6，AWS发布Continuum AI代理平台",
+        "date": "2026-06-22",
+        "author": "科技前线",
+        "source": "https://aidailypost.com/archives/2026/06",
+        "categories": ["tech"],
+        "tags": ["anthropic", "openai", "aws", "google", "ai-agents", "gpt-5.6", "fable-5", "export-control"]
+      },
+      "content": "科技领域多项进展：Fable 5出口管制持续；OpenAI正式发布GPT-5.6聚焦Agentic编码；AWS推出Continuum和Context Companion；OpenAI Codex推出任务录制功能。"
+    },
+    {
+      "category": "fintech",
+      "filename": "2026-06-22-fintech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "金融科技：FDIC发布GENIUS Act AML规则，SEC明确加密资产分类，Charles Schwab进军二元期权市场",
+        "date": "2026-06-22",
+        "author": "金融科技观察",
+        "source": "https://cryptodaily.co.uk/2026/06/fdic-genius-act-aml-stablecoin-compliance",
+        "categories": ["fintech"],
+        "tags": ["stablecoin", "sec", "genius-act", "fdic", "charles-schwab", "crypto-regulation", "defi", "blockchain"]
+      },
+      "content": "金融科技多项进展：FDIC将稳定币发行商纳入银行级合规；SEC发布加密资产分类框架；Charles Schwab推出S&P 500二元期权；Secret Network桥遭攻击损失4.67亿美元。"
+    },
+    {
+      "category": "politics",
+      "filename": "2026-06-22-politics-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "政策动态：白宫发布AI创新与安全行政令，康涅狄格州通过全面AI法案，Great American AI Act进入立法轨道",
+        "date": "2026-06-22",
+        "author": "政策观察",
+        "source": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/",
+        "categories": ["politics"],
+        "tags": ["ai-regulation", "white-house", "connecticut", "congress", "state-legislation", "great-american-ai-act", "data-privacy", "executive-order"]
+      },
+      "content": "政策领域多项进展：白宫发布AI创新与安全行政令；康涅狄格州通过CART Act全面AI法案；Great American AI Act讨论稿发布；各州AI立法超过1,500项创历史新高。"
+    },
+    {
+      "category": "military",
+      "filename": "2026-06-22-military-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "军事科技：五角大楼推进无人机主导计划，欧洲导弹产能取得突破，AI驱动无人机SaaS市场爆发",
+        "date": "2026-06-22",
+        "author": "军事科技观察",
+        "source": "https://www.prnewswire.com/news-releases/drone-saas-market-poised-for-breakout-growth-as-ai-unlocks-fully-autonomous-operations-302804449.html",
+        "categories": ["military"],
+        "tags": ["drone-swarm", "ai-defense", "missile-production", "counter-drone", "semiconductor", "autonomous-systems", "military-tech"]
+      },
+      "content": "军事科技多项进展：五角大楼推进DDP无人机计划；欧洲实现1,000台涡轮喷气发动机里程碑；AI无人机SaaS市场预计2030年超240亿美元；国防部转向本土芯片解决老旧系统问题。"
+    }
+  ],
+  "summary": "Generated comprehensive daily news posts for June 22, 2026, covering cloud-native technology developments (OpenTelemetry graduation, Kubernetes 1.36 AI capabilities), enterprise tech trends (Anthropic export controls, GPT-5.6, AWS Continuum), fintech innovation (FDIC GENIUS Act AML rules, SEC crypto taxonomy), policy developments (White House AI executive order, Connecticut CART Act, Great American AI Act), and military technology advancements (Drone Dominance Program, AI drone SaaS market, European missile production). Each post includes real news sources, in-depth analysis, and forward-looking perspectives.",
+  "stats": {
+    "total_posts": 5,
+    "posts_by_category": {
+      "cloud-native": 1,
+      "tech": 1,
+      "fintech": 1,
+      "politics": 1,
+      "military": 1
+    }
+  }
+}
