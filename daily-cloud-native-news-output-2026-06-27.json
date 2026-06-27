@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "category": "cloud-native",
+      "filename": "2026-06-27-cloud-native-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "云原生动态：Kube-Wasm晋升CNCF毕业，Headlamp Cluster API插件发布，Flipkart获CNCF混沌工程大奖",
+        "date": "2026-06-27",
+        "author": "云原生观察",
+        "source": "https://kubernetes.io/blog/2026/06/25/headlamp-cluster-api-plugin/",
+        "categories": ["cloud-native"],
+        "tags": ["kubernetes", "kube-wasm", "webassembly", "cncf", "headlamp", "cluster-api", "flipkart", "litmuschaos", "chaos-engineering", "gitops", "ai-agent", "udemy", "india-cloud-native"]
+      },
+      "content": "云原生动态：Kube-Wasm晋升CNCF毕业，Headlamp Cluster API插件发布，Flipkart获CNCF混沌工程大奖。Kube-Wasm获CNCF技术监督委员会批准晋升毕业状态，WebAssembly成为Kubernetes一等公民，平均冷启动2.3ms vs 620ms；CNCF项目Headlamp发布Cluster API插件实现可视化集群生命周期管理；Flipkart基于LitmusChaos构建多租户混沌工程平台赢得CNCF最终用户案例竞赛；CNCF与Udemy合作将Kubernetes认证培训推向全球学习者；CNCF报告显示印度拥有225万云原生开发者。"
+    },
+    {
+      "category": "tech",
+      "filename": "2026-06-27-tech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "科技动态：美国政府首次要求OpenAI分阶段发布GPT-5.6，IBM发布0.7nm芯片，NVIDIA AI实现自主训练自我纠错",
+        "date": "2026-06-27",
+        "author": "科技前线",
+        "source": "https://the-decoder.com/openais-gpt-5-6-rollout-now-requires-us-government-approval-on-a-customer-by-customer-basis/",
+        "categories": ["tech"],
+        "tags": ["openai", "gpt-5.6", "us-government", "ai-regulation", "ibm", "0.7nm", "semiconductor", "nvidia", "ai-training", "google-gemini", "computer-use", "ai-agents", "epfl", "micro", "sk-hynix"]
+      },
+      "content": "科技动态：美国政府首次要求OpenAI分阶段发布GPT-5.6，IBM发布0.7nm芯片，NVIDIA AI实现自主训练自我纠错。美国政府首次在模型发布前要求OpenAI逐客户审批GPT-5.6访问权限；IBM发布全球首款0.7nm芯片采用3D纳米堆叠架构集成近1000亿晶体管；NVIDIA A-Evolve在300亿参数模型训练中自主检测并修正了自身指标失效问题；Google Gemini 3.5 Flash内置计算机使用能力；EPFL发布类脑结构LLM MiCRo；NVIDIA与SK Hynix达成AI内存开发合作。"
+    },
+    {
+      "category": "fintech",
+      "filename": "2026-06-27-fintech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "金融科技：Circle与野村联手布局日本稳定币结算市场，Ripple RLUSD获日本批准为外国稳定币，Invesco推出代币化稳定币基金",
+        "date": "2026-06-27",
+        "author": "金融科技观察",
+        "source": "https://coinedition.com/circle-and-nomura-to-launch-usdc-digital-asset-settlement-service-in-japan-by-2027/",
+        "categories": ["fintech"],
+        "tags": ["circle", "nomura", "japan", "usdc", "ripple", "rlusd", "stablecoin", "invesco", "tokenized-fund", "openpayd", "mica", "maple", "kraken", "hyperliquid", "mas", "uk-open-banking", "wero", "payid", "genius-act"]
+      },
+      "content": "金融科技：Circle与野村联手布局日本稳定币结算市场，Ripple RLUSD获日本批准为外国稳定币，Invesco推出代币化稳定币基金。Circle与野村签署MOU计划2027年在日本推出USDC企业级结算服务；Ripple RLUSD获批成为日本首个受监管外国稳定币在SBI VC Trade上线；Invesco向SEC提交代币化稳定币储备基金对标BlackRock；OpenPayd获得MiCA牌照可在欧洲经济区提供加密服务；Maple与Kraken推出链上BTC贷款工具；新加坡MAS将Hyperliquid列入投资者警示名单。"
+    },
+    {
+      "category": "politics",
+      "filename": "2026-06-27-politics-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "政策动态：美国空袭伊朗回应油轮攻击停火面临挑战，众议院因SAVE法案陷入瘫痪，联邦法官拦阻特朗普选民名单行政令",
+        "date": "2026-06-27",
+        "author": "政策观察",
+        "source": "https://www.cbsnews.com/news/us-strikes-iran-drone-attack-cargo-ship-challenge-ceasefire-trump/",
+        "categories": ["politics"],
+        "tags": ["us-iran", "strait-of-hormuz", "ceasefire", "trump", "save-america-act", "house-republicans", "voter-id", "federal-judge", "executive-order", "war-powers", "congress", "supreme-court", "midterm-elections"]
+      },
+      "content": "政策动态：美国空袭伊朗回应油轮攻击停火面临挑战，众议院因SAVE法案陷入瘫痪，联邦法官拦阻特朗普选民名单行政令。美军对伊朗实施空袭回应革命卫队霍尔木兹海峡油轮攻击，美伊停火面临严峻挑战；众议院因共和党强硬派要求审议SAVE America Act陷入瘫痪；联邦法官裁定特朗普联邦选民名单行政令违宪侵犯权力分立；参议院共和党人寻求SAVE法案和3500亿美元国防开支的战略突破；国会历史性通过伊朗战争权力决议；最高法院阿利托与索托马约尔公开冲突。"
+    },
+    {
+      "category": "military",
+      "filename": "2026-06-27-military-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "军事科技：洛克希德马丁获350亿THAAD合同补库存，韩国训练50万无人机兵，德国Tytan新厂月产3000拦截无人机",
+        "date": "2026-06-27",
+        "author": "军事科技观察",
+        "source": "https://www.newsnationnow.com/politics/lockheed-martin-pentagon-missiles/",
+        "categories": ["military"],
+        "tags": ["lockheed-martin", "thad", "pentagon", "missile-defense", "south-korea", "drone-warriors", "tytan", "counter-drone", "germany", "laser-weapons", "white-sands", "hegseth", "japan", "palantir", "maven", "arcyn", "iron-rain", "fire-point", "freyja", "ukraine", "india", "netra", "directed-energy"]
+      },
+      "content": "军事科技：洛克希德马丁获350亿THAAD合同补库存，韩国训练50万无人机兵，德国Tytan新厂月产3000拦截无人机。五角大楼授予洛克希德马丁350亿美元THAAD拦截器七年合同补充伊朗战争消耗；韩国国防部宣布训练50万无人机战士并采购6万架无人机；德国Tytan新工厂月产3000架自主拦截无人机；五角大楼为Hegseth在White Sands演示五套定向能武器系统；日本考虑引进Palantir Maven AI用于自卫队指挥控制；ARCYN推出Iron Rain边缘AI动能反无人机系统；乌克兰Fire Point打造Freyja导弹防御系统成本仅为爱国者七分之一；印度Netra预警机获最终作战许可。"
+    }
+  ],
+  "summary": "Generated 5 comprehensive daily news posts for June 27, 2026, covering cloud-native technology (Kube-Wasm CNCF graduation, Headlamp Cluster API plugin, Flipkart LitmusChaos chaos engineering award, CNCF-Udemy training partnership, India 2.25M cloud native developers), enterprise tech (US government's first preemptive GPT-5.6 release restriction, IBM 0.7nm 100B transistor chip, NVIDIA A-Evolve autonomous self-correction, Google Gemini computer use, EPFL brain-structured MiCRo LLM, NVIDIA-SK Hynix AI memory partnership, 137x agentic AI non-developer growth), fintech innovation (Circle-Nomura Japan USDC settlement 2027, Ripple RLUSD Japan first regulated foreign stablecoin, Invesco tokenized stablecoin fund, OpenPayd MiCA license, Maple-Kraken onchain BTC loans, Hyperliquid MAS alert, EPI Wero Austria expansion), policy developments (US airstrikes on Iran after Hormuz tanker attack endangering ceasefire, House paralysis over SAVE America Act, federal judge blocks Trump voter list executive order, Senate GOP strategy on SAVE and defense spending, War Powers resolution passage, Supreme Court Alito-Sotomayor clash), and military technology (Lockheed $35B THAAD contract, South Korea 500K drone warriors, Tytan 3K/month interceptor factory, White Sands directed energy demo, Japan Palantir Maven AI for SDF, ARCYN Iron Rain kinetic C-UAS, Fire Point Freyja 1/7 Patriot cost missile defense, India Netra AEW&C FOC). Each post includes real news sources, in-depth analysis, and forward-looking perspectives.",
+  "stats": {
+    "total_posts": 5,
+    "posts_by_category": {
+      "cloud-native": 1,
+      "tech": 1,
+      "fintech": 1,
+      "politics": 1,
+      "military": 1
+    }
+  }
+}
