@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "category": "cloud-native",
+      "filename": "2026-06-29-cloud-native-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "云原生动态：SPO v1.0稳定版发布，Kubernetes原地Pod重启Beta，Docker加固供应链安全",
+        "date": "2026-06-29",
+        "author": "云原生观察",
+        "source": "https://www.cncf.io/blog/2026/06/26/security-profiles-operator-v1-stable-apis-security-hardened-and-shaping-upstream-kubernetes/",
+        "categories": ["cloud-native"],
+        "tags": ["kubernetes", "security-profiles-operator", "cncf", "docker", "supply-chain", "sbom", "eu-cra", "pod-restart", "kubelet", "automation", "ai-inference", "gpu"]
+      },
+      "content": "云原生动态：SPO v1.0稳定版发布，Kubernetes原地Pod重启Beta，Docker加固供应链安全。Security Profiles Operator v1.0.0毕业至CRD v1稳定版，经第三方审计与零停机迁移；Kubernetes v1.36原地Pod容器重启毕业Beta，保留Pod沙箱实现无中断恢复；Docker发布SBOM生成指南和EU CRA合规解读，9月11日强制报告义务倒计时；Kubernetes团队82%信任自动化交付但仅27%允许AI修改CPU/内存，AI推理工作负载扩大信任鸿沟。"
+    },
+    {
+      "category": "tech",
+      "filename": "2026-06-29-tech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "科技动态：HP与OpenAI达成Frontier战略合作，Google限制Meta使用Gemini，AWS上调AI云定价",
+        "date": "2026-06-29",
+        "author": "科技前线",
+        "source": "https://openai.com/index/hp-frontier-partnership/",
+        "categories": ["tech"],
+        "tags": ["openai", "hp", "frontier", "google", "meta", "gemini", "aws", "ai-pricing", "microsoft", "fairwater", "gpu", "india", "perplexity", "legal-ai"]
+      },
+      "content": "科技动态：HP与OpenAI达成Frontier战略合作，Google限制Meta使用Gemini，AWS上调AI云定价。HP将OpenAI Frontier作为统一平台规模化部署AI，ChatGPT安全分析每周释放82小时产能；Google因算力短缺限制Meta的Gemini容量，导致Meta内部AI项目延迟；AWS二次上调EC2 Capacity Blocks for ML定价，Google Cloud跟进，标志AI算力从通货紧缩转向通货膨胀；微软73亿美元Fairwater园区启用，数十万GB200 Blackwell GPU组成统一AI超算；OpenAI任命Uber前高管Prabhjeet Singh为印度区总经理；Perplexity推出Computer for Counsel法律AI平台，跨20+模型路由。"
+    },
+    {
+      "category": "fintech",
+      "filename": "2026-06-29-fintech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "金融科技：BIS警告稳定币风险，EU MiCA处罚框架出炉，GENIUS法案规则最后冲刺",
+        "date": "2026-06-29",
+        "author": "金融科技观察",
+        "source": "https://cointelegraph.com/news/bis-warns-stablecoins-risk-fragmenting-global-financial-system",
+        "categories": ["fintech"],
+        "tags": ["bis", "stablecoin", "mica", "eba", "genius-act", "occ", "brazil", "uniswap", "spark", "defi", "ripple", "rlusd", "japan", "scrypt", "franklin-templeton", "tokenization"]
+      },
+      "content": "金融科技：BIS警告稳定币风险，EU MiCA处罚框架出炉，GENIUS法案规则最后冲刺。BIS年度报告称3160亿美元稳定币市场缺乏制度特征，可能碎片化全球货币体系，呼吁加速代币化央行货币；EBA发布MiCA处罚框架，最高可达年收入12.5%，7月1日MiCA全面生效；巴西央行提议稳定币跨境支付超1万美元需24小时持有期；Uniswap与Spark合作开发稳定币FX层减少流动性碎片化；Ripple与SBI在日本推出RLUSD，JFSA批准为第4类电子支付工具；SCRYPT整合Franklin Templeton BENJI代币化基金用于国库管理。"
+    },
+    {
+      "category": "politics",
+      "filename": "2026-06-29-politics-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "政策动态：美伊战火重燃互袭军事目标，特朗普提名ICE新局长，密西西比州创建移民名单",
+        "date": "2026-06-29",
+        "author": "政策观察",
+        "source": "https://www.aljazeera.com/news/2026/6/28/us-strikes-iran-for-second-day-is-it-a-violation-of-war-powers-resolution",
+        "categories": ["politics"],
+        "tags": ["us-iran", "strait-of-hormuz", "ceasefire", "trump", "irgc", "kuwait", "bahrain", "war-powers", "ice", "lance-schroyer", "immigration", "mississippi", "congress", "midterm-elections"]
+      },
+      "content": "政策动态：美伊战火重燃互袭军事目标，特朗普提名ICE新局长，密西西比州创建移民名单。美军空袭伊朗军事监视、通信、防空和无人机储存设施回应油轮袭击，伊朗革命卫队向科威特和巴林美军基地发射导弹和无人机反击，两周前签署的临时和平协议面临崩溃；国会战争权力决议通过后民主党威胁起诉特朗普违宪；特朗普提名前海军陆战队员Lance Schroyer为ICE局长，拟结束近十年无参议院确认局长期；密西西比州法律授权创建非法移民完整数据库，权益倡导者警告将配合大规模驱逐。"
+    },
+    {
+      "category": "military",
+      "filename": "2026-06-29-military-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "军事科技：MQ-28 Ghost Bat首现美军大型演习，空军选定CCA生产合同，波兰采购V-BAT无人机",
+        "date": "2026-06-29",
+        "author": "军事科技观察",
+        "source": "https://theaircurrent.com/defense/first-us-deployment-collaborative-combat-aircraft-boeing-mq-28-valiant-shield/",
+        "categories": ["military"],
+        "tags": ["mq-28", "ghost-bat", "boeing", "valiant-shield", "cca", "general-atomics", "anduril", "us-air-force", "poland", "v-bat", "shield-ai", "airbus", "eurodrone", "kawasaki", "japan", "us-army", "drone", "autonomous", "human-machine-teaming"]
+      },
+      "content": "军事科技：MQ-28 Ghost Bat首现美军大型演习，空军选定CCA生产合同，波兰采购V-BAT无人机。波音MQ-28A Ghost Bat在Valiant Shield 2026首次以忠诚僚机身份与有人战斗机编队参演，验证ACE敏捷作战部署概念；空军选定General Atomics FQ-42A和Anduril FQ-44A进入生产，目标2020年代末超150架；波兰采购Shield AI V-BAT无人机部署海军舰艇，成为北约东翼首个V-BAT操作国；美军连级演习使用25架攻击无人机和C4地面无人车清除突破通道，成本低于三次155mm齐射；空客与川崎重工签署备忘录探索日本反潜型Eurodrone，续航40小时载荷2.3吨。"
+    }
+  ],
+  "summary": "Generated 5 comprehensive daily news posts for June 29, 2026, covering cloud-native technology (Security Profiles Operator v1.0 stable GA, Kubernetes in-place pod restart beta, Docker SBOM/CRA supply-chain guidance, Kubernetes automation trust survey), enterprise tech (HP-OpenAI Frontier strategic partnership, Google limiting Meta's Gemini capacity, AWS GPU pricing hike, Microsoft Fairwater AI supercomputer, OpenAI India MD appointment, Perplexity legal AI platform), fintech regulation (BIS stablecoin systemic risk warning, EU MiCA EBA penalty framework up to 12.5% revenue, Brazil 24-hour stablecoin hold proposal, Uniswap-Spark stablecoin FX layer, Ripple RLUSD Japan launch, SCRYPT-Franklin Templeton tokenized treasury), policy developments (US-Iran strike escalation endangering ceasefire, War Powers Resolution violation threat, Trump ICE director nomination, Mississippi immigrant registry law), and military technology (MQ-28 Ghost Bat Valiant Shield debut, CCA production contracts awarded, Poland V-BAT Baltic deployment, US Army drone/C4 robot breach exercise, Airbus-Kawasaki Japan ASW Eurodrone MoU). Each post includes real news sources with verified URLs, deep analysis of industry implications, and forward-looking perspectives.",
+  "stats": {
+    "total_posts": 5,
+    "posts_by_category": {
+      "cloud-native": 1,
+      "tech": 1,
+      "fintech": 1,
+      "politics": 1,
+      "military": 1
+    }
+  }
+}
