@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "category": "cloud-native",
+      "filename": "2026-07-06-cloud-native-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "云原生动态：Podman v6.0.0正式发布迁移至CNCF组织，Linkerd 2.20控制面内存降低85%，AWS EKS实现全私有网络",
+        "date": "2026-07-06",
+        "author": "云原生观察",
+        "source": "https://github.com/podman-container-tools/podman/releases/tag/v6.0.0",
+        "categories": ["cloud-native"],
+        "tags": ["podman", "v6.0.0", "cncf", "linkerd", "service-mesh", "buoyant", "kubernetes", "AWS", "EKS", "container-management", "cve-2026-57231", "kubecon-japan"]
+      },
+      "content": "云原生动态：Podman v6.0.0正式发布迁移至CNCF组织，Linkerd 2.20控制面内存降低85%，AWS EKS实现全私有网络。Podman v6.0.0发布为加入CNCF后首个大版本，修复CVE-2026-57231，移除BoltDB/CNI/cgroups v1/iptables等遗留技术；Linkerd 2.20控制平面内存使用量削减85%，引入限流感知负载均衡和原生sidecar稳定版；AWS EKS实现全私有网络，控制面与工作节点通过PrivateLink和VPC端点通信；KubeCon + CloudNativeCon Japan 2026将于7月28-30日在横滨举行；CNCF报告全球云原生开发者达1990万。"
+    },
+    {
+      "category": "tech",
+      "filename": "2026-07-06-tech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "科技动态：Meta推出Meta Compute云业务出售过剩AI算力，众议院推进10项AI法案加强美国科技领导力",
+        "date": "2026-07-06",
+        "author": "科技前线",
+        "source": "https://www.reuters.com/business/meta-sell-excess-ai-computing-capacity-via-cloud-business-bloomberg-news-reports-2026-07-01/",
+        "categories": ["tech"],
+        "tags": ["meta", "meta-compute", "cloud-computing", "ai-infrastructure", "aws", "azure", "google-cloud", "coreweave", "nebius", "muse-spark", "congress", "ai-legislation", "house-science-committee", "us-tech-leadership"]
+      },
+      "content": "科技动态：Meta推出Meta Compute云业务出售过剩AI算力，众议院推进10项AI法案加强美国科技领导力。Meta宣布建设Meta Compute云业务出售过剩AI计算容量，股价飙升10%达612.91美元，CoreWeave跌14%Nebius暴跌17%，半导体板块整体承压；Meta年AI支出达1150-1450亿美元，项目由Santosh Janardhan、Daniel Gross和Dina Powell McCormick领导；众议院科学委员会推进10项两党AI法案含安全创新教育等领域；Sanders和Ocasio-Cortez同时提出AI数据中心暂停法案。"
+    },
+    {
+      "category": "fintech",
+      "filename": "2026-07-06-fintech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "金融科技：MiCA全面生效重塑欧洲加密市场，渣打加入ESMA MiCA注册，英国央行推动零售支付改革",
+        "date": "2026-07-06",
+        "author": "金融科技观察",
+        "source": "https://cryptobriefing.com/mica-crypto-regulation-eu-enforcement/",
+        "categories": ["fintech"],
+        "tags": ["mica", "eu-regulation", "stablecoin", "esma", "standard-chartered", "bank-of-england", "retail-payments", "crypto-exchange", "coinbase", "binance", "usdc", "usdt", "circle", "genius-act", "digital-pound", "fca"]
+      },
+      "content": "金融科技：MiCA全面生效重塑欧洲加密市场，渣打加入ESMA MiCA注册，英国央行推动零售支付改革。MiCA于7月1日全面生效，1200余家公司仅约210-244家获授权占17-20%，Binance七天内流失13.7亿美元；渣打银行等57家公司入选ESMA首批MiCA注册名单传统银行首次入局；英国央行启动零售支付系统改革咨询数字英镑实验室运行至2026年7月；欧盟启动MiCA审查将稳定币规则和跨境对等认定列为首要修订领域。"
+    },
+    {
+      "category": "politics",
+      "filename": "2026-07-06-politics-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "政策动态：布鲁克林大桥国庆烟花起火，特朗普庆祝美国250周年，众议院因SAVE法案僵局提前休会",
+        "date": "2026-07-06",
+        "author": "政策观察",
+        "source": "https://ny1.com/nyc/all-boroughs/news/2026/07/05/fire-breaks-out-on-brooklyn-bridge-during-new-york-s-fireworks-show",
+        "categories": ["politics"],
+        "tags": ["brooklyn-bridge", "fire", "july-4", "fireworks", "america-250", "trump", "mount-rushmore", "national-mall", "congress", "save-act", "house-republicans", "voter-id", "senate-panel", "defense-budget", "midterm-elections"]
+      },
+      "content": "政策动态：布鲁克林大桥国庆烟花起火，特朗普庆祝美国250周年，众议院因SAVE法案僵局提前休会。纽约布鲁克林大桥在梅西国庆烟花表演期间起火被FDNY迅速扑灭无人员伤亡；特朗普在拉什莫尔山和国家广场主持美国250周年庆典讲话；众议院因SAVE America Act选民身份证法案僵局提前进入休会期国防法案被搁置；参议院讨论1.5万亿美元创纪录国防预算请求最高法院发布多项期末裁决。"
+    },
+    {
+      "category": "military",
+      "filename": "2026-07-06-military-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "军事科技：波兰签署48亿美元Saab A26潜艇合同，荷兰发布无人机优先国防战略，以色列向罗马尼亚出售Spyder防空系统",
+        "date": "2026-07-06",
+        "author": "军事科技观察",
+        "source": "https://www.defensenews.com/global/europe/2026/06/29/poland-awards-48-billion-a26-submarine-deal-to-saab",
+        "categories": ["military"],
+        "tags": ["poland", "saab", "A26", "submarine", "orka", "baltic-sea", "netherlands", "drones", "unmanned-systems", "defence-white-paper", "israel", "spyder", "romania", "rafael", "nato", "baltic-security", "drone-warfare"]
+      },
+      "content": "军事科技：波兰签署48亿美元Saab A26潜艇合同，荷兰发布无人机优先国防战略，以色列向罗马尼亚出售Spyder防空系统。波兰与瑞典Saab签署约48亿美元三艘A26型潜艇合同可携带无人机蜂群守护波罗的海关键基础设施2038年交付；荷兰发布2026国防白皮书确立五年内50%以上作战效果由无人系统实现包括反无人机实验室和选择性征兵；以色列Rafael向罗马尼亚出售23亿美元Spyder中程防空系统；荷兰追加5亿欧元对乌军援含2.5亿无人机。"
+    }
+  ],
+  "summary": "Generated 5 comprehensive daily news posts for July 6, 2026, covering cloud-native technology (Podman v6.0.0 CNCF migration, Linkerd 2.20 85% memory reduction, AWS EKS private networking, KubeCon Japan 2026), enterprise tech (Meta Compute cloud business selling excess AI capacity, House 10 AI bills advancing, $115-145B Meta AI spend), fintech innovation (MiCA full enforcement reshaping EU crypto with 80% firms non-compliant, Standard Chartered entering MiCA registry, Bank of England retail payments overhaul, EU MiCA review launched), policy developments (Brooklyn Bridge fireworks fire, Trump America 250th celebrations at Mt. Rushmore and National Mall, House recess over SAVE Act impasse, record $1.5T defense budget request), and military technology (Poland $4.8B Saab A26 submarine contract with drone swarm capability, Netherlands 50% unmanned operational effects by 2031 strategy, Israel $2.3B Spyder air defense sale to Romania, Netherlands €500M Ukraine aid with drone focus). Each post includes real news sources, in-depth analysis, and forward-looking perspectives.",
+  "stats": {
+    "total_posts": 5,
+    "posts_by_category": {
+      "cloud-native": 1,
+      "tech": 1,
+      "fintech": 1,
+      "politics": 1,
+      "military": 1
+    }
+  }
+}
