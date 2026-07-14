@@ -1,56 +1,83 @@
 ---
 layout: post
-title: "欧盟CADA法案与GAO云采购报告：全球云治理进入新阶段"
+title: "政策动态：特拉华州创设AI代理法律实体提案，Anthropic以216亿澳元投资换取澳大利亚版权确定性，伊利诺伊州AI安全审计法签署成首个强制第三方审计州"
 date: 2026-07-13
-author: "云原生观察"
-source: "https://digital-strategy.ec.europa.eu/en/policies/cloud-and-ai-development-act"
+author: "政策观察"
+source: "https://fortune.com/2026/07/13/exclusive-delaware-ai-agents-legal-entity-proposal-llc-pbc/"
 categories:
   - politics
 tags:
-  - eu-cada
-  - cloud-regulation
-  - data-sovereignty
-  - gao
-  - federal-cloud
+  - delaware
+  - AI-agent
+  - legal-entity
+  - AIC
+  - norm-ai
+  - Anthropic
+  - Australia
+  - copyright
+  - AI-training
+  - data-centres
+  - Illinois
+  - AI-Safety-Act
+  - SB-315
+  - third-party-audit
+  - OpenAI
+  - liability-shield
+  - India
+  - MeitY
+  - cybersecurity
+  - economists
+  - AI-job-displacement
+  - AEI
+  - AI-governance
 ---
 
-# 欧盟CADA法案与GAO云采购报告：全球云治理进入新阶段
+# 政策动态：特拉华州创设AI代理法律实体提案，Anthropic以216亿澳元投资换取澳大利亚版权确定性，伊利诺伊州AI安全审计法签署成首个强制第三方审计州
 
-全球云计算监管框架正在同步演进。欧盟提出Cloud and AI Development Act（CADA）引入四级数字主权框架，美国GAO发布联邦云采购审计报告指出过时法规阻碍云采用。两份文件共同描绘出2026年云治理的核心挑战：如何在安全主权与技术效率之间找到平衡。
+本周全球AI政策与监管密集推进：特拉华州州务卿与Norm Ai合作提出"AI代理公司"（AIC）法律实体概念，为自主AI代理运营企业开辟新法律框架；Anthropic告知澳大利亚政府其$150亿（216亿澳元）投资取决于版权法确定性，正在审议的改革选项包括法定许可、集体许可和加强自愿许可三种模式；伊利诺伊州州长签署SB 315成为全美首个要求对前沿AI系统进行年度第三方审计的州，同时OpenAI此前推动的SB 3444责任豁免法案仍在参议院搁置。
 
-## 主要新闻 (Main News)
+## 主要新闻
 
-### 欧盟CADA法案：四级主权框架重塑云服务采购
+### 特拉华州提出AI代理法律实体（AIC）：为无人类主导的企业开辟法律路径
 
-2026年6月3日，欧盟委员会发布了Cloud and AI Development Act（CADA）提案，作为Tech Sovereignty Package的核心组成部分。CADA引入了一个四级"Union Assurance"框架，用于评估云和AI服务的主权水平：
+特拉华州州务卿Charuni Patibanda-Sanchez与Norm Ai CEO John Nay联合在Fortune撰文提出"AI代理公司"（AIC）法律实体概念。该提案源自2023年发表在《Science》上的论文，该论文指出多个州的法律并未明确禁止AI代理在无人类主持的情况下运营公司。当自主软件开始独立签约、支付供应商和进行交易时，现有法律框架不足以应对。
 
-- **Level 1（EU Location）**：数据和基础设施位于欧盟境内，允许美国超大规模云服务商在拥有欧盟区域的前提下参与
-- **Level 2（Independence & Transparency）**：需证明独立于第三国且软件供应链透明
-- **Level 3（EU Ownership & EU Control）**：要求提供商在欧盟注册、欧盟所有且受欧盟控制
-- **Level 4（Complete Digital Sovereignty）**：完全数字主权，对国防等敏感领域是基线要求
+AIC提案旨在为AI代理运营的企业创建一个介于有限责任公司（LLC）和公益公司（PBC）之间的新法律实体类型。特拉华州作为美国最重要的公司注册地——超过190万家企业在此注册，包括68%的财富500强——其立法选择对全国具有示范效应。这一提案与伊利诺伊州AI安全审计法和欧盟AI法案等其他监管举措形成互补，共同构建AI治理的多层级框架。
 
-委员会副主席Henna Virkkunen明确表示，受美国CLOUD Act约束的提供商在达到最高两级方面将面临结构性困难。CADA旨在将欧盟数据中心容量在5-7年内至少增加三倍，同时简化数据中心的许可和部署流程。
+**Source:** [Exclusive: Delaware Secretary of State partners with Norm Ai to propose the AIC, a legal entity for agents](https://fortune.com/2026/07/13/exclusive-delaware-ai-agents-legal-entity-proposal-llc-pbc/)
 
-**Source:** [Cloud and AI Development Act](https://digital-strategy.ec.europa.eu/en/policies/cloud-and-ai-development-act)
+### Anthropic以216亿澳元投资换取澳大利亚版权确定性：政府内阁分裂
 
-### GAO联邦云采购报告：过时法规严重阻碍云采用
+Anthropic告知澳大利亚联邦政府，其提出的US$150亿（约216亿澳元）AI基础设施投资——包括AI模型开发能力和数据中心——取决于政府在版权法方面提供更大的确定性。根据自由信息公开法发布的财政部简报，Anthropic寻求的是对其现有义务的澄清，特别是如何处理难以识别和逐个授权的"长尾"小权利人的作品。Anthropic此前已同意支付$15亿和解50万本书被用于训练的集体诉讼。
 
-美国政府问责办公室（GAO）于2026年6月23日发布审计报告（GAO-26-107530），对24个联邦机构的云采购实践进行了全面评估。报告发现：
+澳大利亚司法部长Michelle Rowland于2025年10月排除了文本和数据挖掘例外选项，此后其部门一直在审议三种模式：法定许可（设定固定付款）、集体许可（通过版权代理机构运营）、以及加强现有自愿许可框架。政府还在考虑新的执法制度，使小权利人更容易追究科技公司未经授权使用其作品的责任。内阁据报在此问题上存在分歧——工业部长Tim Ayres和数字经济发展助理部长Andrew Charlton更倾向于投资案例，而Rowland和艺术部长Tony Burke则采取更保护主义立场。
 
-联邦采购条例（FAR）仍然过时，缺乏云计算的定义，IT定义已有20年历史，商业产品或服务的定义与云计算不符。报告建议国会考虑修改FAR以更新云相关定义。
+**Source:** [Anthropic ties $21.6bn Australian investment to copyright certainty, as Canberra weighs AI reform](https://www.thelawyermag.com/au/news/general/anthropic-ties-216bn-australian-investment-to-copyright-certainty-as-canberra-weighs-ai-reform/582104)
 
-此外，多个大型机构正在使用多个云供应商以实现效率，但正面临互操作性等新挑战。DHS同意了GAO的建议，但GSA不同意，联邦CIO委员会未提供评论。报告强调，更新FAR以反映现代计算技术对于有效签订云服务合同至关重要。
+### 伊利诺伊州签署SB 315：全美首个强制年度第三方AI安全审计法
 
-**Source:** [GAO-26-107530 Cloud Computing Report](https://www.gao.gov/products/gao-26-107530)
+伊利诺伊州州长JB Pritzker于7月6日签署SB 315（《人工智能安全措施法》），使伊利诺伊州成为全美首个要求对前沿AI系统进行年度第三方审计的州。该法适用于年收入超过$5亿的模型开发者，要求发布描述如何识别和管理"灾难性风险"的安全框架——定义为50人以上死亡或严重伤害，或$100万以上财产损失——并在72小时内报告合格事件（若死亡或严重伤害迫在眉睫则为24小时）。从2028年开始，受覆盖的开发者必须聘请无利益冲突的独立第三方审计师每年审查合规情况。
 
-## 分析 (Analysis)
+值得关注的是，OpenAI此前在同一大楼推动的SB 3444——拟保护AI开发者免受造成100人以上死亡或$10亿以上损害的民事责任——仍在参议院委员会搁置。SB 3444在90%伊利诺伊州居民反对的民调数据和Anthropic公开反对的压力下，OpenAI于5月撤回了对该法案的支持。SB 315在无责任豁免、但有强制审计的模式下成为法律——OpenAI花费政治资本推动豁免，最终仍需遵守它原本未寻求的审计制度。伊利诺伊州州长Pritzker表示"国会和总统应该通过类似立法，但到目前为止他们一直不愿这样做，因为许多人被特殊利益集团俘获。"
 
-CADA的四级主权框架代表了欧盟在数字基础设施治理方面最具雄心的尝试。其核心逻辑是：云计算已成为关键基础设施，数据主权不再仅仅是数据保护问题，而是国家安全问题。CLOUD Act允许美国当局访问美国公司持有的数据，无论该数据位于世界何处——这一法律现实使得任何受CLOUD Act约束的云服务商在CADA的Level 3和Level 4评估中面临结构性障碍。
+**Source:** [OpenAI's Liability Shield Died - Illinois Passed Audits](https://awesomeagents.ai/news/illinois-ai-safety-act-openai-shield-collapse/)
 
-对云服务市场的影响是深远的。如果CADA最终成为法律，美国超大规模云服务商（AWS、Azure、Google Cloud）在欧盟公共部门和国防相关市场将面临显著的准入限制。但CADA并非完全排斥非欧盟供应商——它采用的是基于风险和采购驱动的方法，允许全球超大规模云服务商在满足增强合规义务的前提下继续参与。
+### 美国经济学家联名警告AI可能导致大规模失业，AEI批评联邦AI治理即兴化
 
-与此同时，GAO的报告揭示了美国联邦政府内部面临的对称挑战。当欧盟在讨论如何构建主权云框架时，美国联邦政府仍在为20年前的IT定义和过时的采购法规所困扰。24个联邦机构中，GSA甚至不同意GAO的建议——这反映出联邦云采购改革面临的不仅是技术问题，更是制度惯性问题。
+包括16位诺贝尔经济学奖得主在内的200多位经济学家发布联合声明警告AI"可能带来大规模失业风险"，呼吁政策制定者和技术领袖开始构建应对颠覆的政策和制度。斯坦福经济学家Erik Brynjolfsson表示经济学界"出现了显著转变"——此前该领域普遍对AI快速颠覆的警告持怀疑态度。2024年诺贝尔经济学奖得主Daron Acemoglu表示"如果AI在更压缩的时间段内做到机器人在制造业所做的事情，那将是非常颠覆性的"。
 
-## 结论 (Conclusion)
+同日，美国企业研究所（AEI）John Bailey发表分析批评美国正在通过"氛围政策制定"（vibe policymaking）即兴应对前沿AI治理。他指出Anthropic发布Mythos 5和Fable 5后，政府命令切断对所有外国公民的访问——但无法解释是什么触发了这一行动或限制为何被解除。没有共享的风险评估标准、没有预先定义的响应阶梯、没有明确的决策权责链条——政府无法区分突破性风险与旧漏洞在更强包装中的重演。Bailey呼吁建立三个核心能力：与前沿实验室的结构化预发布访问、共享风险评分标准和响应阶梯、以及加强CAISI的技术评估能力。
 
-欧盟CADA和美国GAO报告共同指向一个核心问题：全球云治理框架正在从"自愿合规"走向"强制主权"。对于在多个司法管辖区运营的企业来说，2026年下半年的合规准备工作至关重要。CADA仍处于提案阶段，但其方向已足够明确——数据主权不再是可选项，而是采购资格的前置条件。企业应立即评估其云和AI部署的潜在影响，包括合同、技术和治理层面的合规性。
+**Source:** [Economists warn AI could drive mass job displacement](https://qz.com/economists-ai-job-displacement-industrial-revolution-statement-071326)
+
+## 分析
+
+特拉华州AIC提案标志着AI治理进入"法律实体化"阶段。当AI代理开始独立签约、付款和交易时，现有公司法中关于"人"的定义——通常假设为自然人或由自然人控制的法人——将面临根本性挑战。特拉华州选择创建新的法律实体类型而非修改现有LLC定义，是一种谨慎的路径：它承认AI代理需要法律主体性，但通过专门的实体类型（而非通用的有限责任）来限制潜在风险。对科技公司而言，这意味着未来运营AI代理商业可能需要在特拉华州注册AIC，而非简单地将代理嵌入现有LLC结构。
+
+Anthropic的澳大利亚版权谈判揭示了AI训练数据合法性的全球博弈。216亿澳元的投资筹码与版权法确定性的交换，实质上是AI基础设施投资与知识产权保护之间的价格发现。三种审议选项——法定许可、集体许可、自愿许可——中没有一种复制美国合理使用或欧盟TDM例外的模式，这意味着澳大利亚AI训练将长期处于"许可优先"制度下。内阁分裂的报道表明，在投资吸引力与创意产业保护之间寻找平衡是全球性难题。
+
+伊利诺伊州SB 315的通过与SB 3444的搁置构成了一个完整的政策博弈案例：OpenAI推动责任豁免（SB 3444）失败后，被迫接受一个更严格的审计制度（SB 315）。这表明前沿AI公司的政策策略存在风险——推动过度豁免可能适得其反，导致比原本更严格的监管结果。年度第三方审计要求为AI合规审计创造了持续性市场需求。
+
+## 结论
+
+本周全球AI政策呈现三条主线：法律主体性创新（特拉华州AIC提案）、训练数据版权博弈（Anthropic澳大利亚版权谈判）、以及安全审计制度化（伊利诺伊州SB 315）。对于AI企业法务团队，应关注特拉华州AIC立法进展对AI代理商业模式的影响；对于AI基础设施投资者，澳大利亚版权改革时间表是评估南半球投资窗口的关键变量；对于所有前沿AI开发者，伊利诺伊州年度审计要求预示了其他州可能跟进的合规成本上升趋势。
