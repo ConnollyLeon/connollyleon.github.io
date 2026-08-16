@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "category": "cloud-native",
+      "filename": "2026-08-16-cloud-native-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "云原生动态：CNCF公布KubeCon NA 2026议程并新增AI推理与Agentic轨道、日本云原生开发者近百万、KubeVirt与Calico实时迁移演示",
+        "date": "2026-08-16",
+        "author": "云原生观察",
+        "source": "https://www.prnewswire.com/news-releases/cncf-reveals-kubecon--cloudnativecon-north-america-2026-schedule-adds-new-ai-inference--agentic-track-302846486.html",
+        "categories": ["cloud-native"],
+        "tags": ["cncf", "kubecon", "kubernetes", "ai-inference", "agentic", "vllm", "kserve", "japan", "slashdata", "kubevirt"]
+      }
+    },
+    {
+      "category": "tech",
+      "filename": "2026-08-16-tech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "AI动态：Meta发布Glimmer开源模型并倡导去中心化AI、Google允许移除Gemini可见水印、Unitree完成9.05亿美元IPO即将上市",
+        "date": "2026-08-16",
+        "author": "云原生观察",
+        "source": "https://techcrunch.com/video/does-mark-zuckerberg-really-believe-ai-is-for-everyone/",
+        "categories": ["tech"],
+        "tags": ["meta", "glimmer", "open-weight", "google", "gemini", "watermark", "unitree", "ipo", "humanoid-robotics", "sk-hynix"]
+      }
+    },
+    {
+      "category": "fintech",
+      "filename": "2026-08-16-fintech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "金融科技动态：Apex与Kalshi合作推出预测市场API、Flutterwave联合Caliza提供美元稳定币跨境支付、Bank of America与JPMorgan采用新版Swift支付框架",
+        "date": "2026-08-16",
+        "author": "云原生观察",
+        "source": "https://thepaypers.com/fintech/news/apex-fintech-solutions-and-kalshi-launch-prediction-markets-api",
+        "categories": ["fintech"],
+        "tags": ["apex-fintech", "kalshi", "prediction-markets", "flutterwave", "caliza", "stablecoins", "swift", "bank-of-america", "jpmorgan", "payments"]
+      }
+    },
+    {
+      "category": "politics",
+      "filename": "2026-08-16-politics-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "AI治理动态：欧盟AI法案透明度条款8月2日正式执行、FTC推进AI准确性政策声明、加州AI透明度法与夏威夷数字仿冒法同步生效",
+        "date": "2026-08-16",
+        "author": "云原生观察",
+        "source": "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en",
+        "categories": ["politics"],
+        "tags": ["eu-ai-act", "article-50", "transparency", "ftc", "california", "sb-942", "hawaii", "ai-regulation", "compliance"]
+      }
+    },
+    {
+      "category": "military",
+      "filename": "2026-08-16-military-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "军事科技动态：Rheinmetall成功从容器化发射器发射FV-014游荡弹药系统、澳大利亚陆军正式列装AS9 Huntsman自行榴弹炮、Lockheed Martin Kodiak容器化发射器完成首次实弹测试",
+        "date": "2026-08-16",
+        "author": "云原生观察",
+        "source": "https://militaryleak.com/2026/08/15/rheinmetall-successfully-launches-fv-014-loitering-munition-system-from-its-own-containerized-missile-launcher/",
+        "categories": ["military"],
+        "tags": ["rheinmetall", "fv-014", "loitering-munition", "australia", "as9-huntsman", "south-korea", "lockheed-martin", "kodiak", "containerized-launcher", "counter-uas"]
+      }
+    }
+  ]
+}
