@@ -1,0 +1,141 @@
+{
+  "posts": [
+    {
+      "category": "cloud-native",
+      "filename": "2026-09-13-cloud-native-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "云原生动态：v1.37原生直方图进入Beta并默认启用、原地Pod扩缩容调度抢占进入Alpha、CNCF三项目毕业（Kubeflow/Karmada/Buildpacks）",
+        "date": "2026-09-13",
+        "author": "云原生观察",
+        "source": "https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/",
+        "categories": [
+          "cloud-native"
+        ],
+        "tags": [
+          "kubernetes",
+          "observability",
+          "native-histograms",
+          "prometheus",
+          "scheduler",
+          "cncf",
+          "kubeflow",
+          "karmada"
+        ]
+      },
+      "content": "\n\n# 云原生动态：v1.37原生直方图进入Beta并默认启用、原地Pod扩缩容调度抢占进入Alpha、CNCF三项目毕业（Kubeflow/Karmada/Buildpacks）\n\nKubernetes社区本周持续消化v1.37（Garhwal）这一大版本：原生直方图（Native Histograms）从v1.36的Alpha正式进入Beta并默认启用，为Kubernetes核心组件指标带来高分辨率、低基数的可观测性；v1.37还以Alpha形态引入\"原地Pod扩缩容调度抢占\"（Scheduler Preemption for In-Place Pod Resize），让调度器能在节点满载时为关键负载的原地扩容腾出容量。与此同时，CNCF宣布Kubeflow、Karmada与Cloud Native Buildpacks三个项目毕业，The New Stack也推出首期\"Road to KubeCon\"系列，直指社区向KubeCon NA 2026奔腾的另一条主线：AI工作负载正在重塑运维与访问控制。\n\n## 主要新闻 (Main News)\n\n### v1.37原生直方图进入Beta：核心组件指标迈向\"低基数、高精度\"的新度量范式\n\nKubernetes v1.37将原生直方图支持（KEP-5808，v1.36引入Alpha）提升为Beta并默认启用。这一特性让Kubernetes核心组件以Prometheus Native Histograms格式暴露延迟与时长类指标：与传统的固定桶直方图相比，原生直方图稀疏存储桶跨度（spans）与模式（schema），在不牺牲分位数精度的前提下大幅降低基数与存储开销。关键设计是\"双暴露\"（dual exposition）：同一protobuf载荷中同时保留经典桶（h.Bucket）与原生跨度（h.Schema/h.PositiveSpan），使不理解原生格式的经典Prometheus不破不立、零迁移风险；官方采用经过调优的指数配置（BucketFactor 1.1）在分辨率与序列数量间取得平衡。据社区测算，每个指标的时间序列数量最高可减少约90%，Prometheus内存与TSDB占用显著下降。对运维者而言，升级到v1.37即默认生效，唯一的动作是确认Prometheus版本与remote-write链路是否支持原生直方图，并把依赖经典桶的告警/看板逐步迁移到原生感知函数以获得更紧的分位数误差。\n\n**Source:** [Kubernetes v1.37: Native Histograms Graduates to Beta](https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/)\n\n### 原地Pod扩缩容调度抢占（Alpha）：为动态资源配置补上\"容量归属\"的短板\n\nKubernetes v1.35将In-Place Pod Resize特性推向GA，使运行中容器的CPU/内存分配可动态调整而无需重启。但原地扩容有一个悬而未决的问题：当一个节点利用率已满、待扩容的Pod在该节点上\"骑虎难下\"时，静态的调度决策无法为新资源腾位。v1.37以Alpha引入调度抢占能力（特性门控`InPlacePodVerticalScalingSchedulerPreemption`），让调度器识别节点容量不足后，主动抢占节点上低优先级工作负载，从而为关键高优先级应用的原地扩容清出容量。该能力需在kube-apiserver、kube-scheduler与kubelet上统一启用。它把\"资源分配\"从Pod首次调度的静态一刻，延伸为运行期持续可变的动态博弈——结合优先级抢占语义，使企业级密度控制与工作负载优先级在\"热调整\"场景下首次得到调度器级的原生支持。\n\n**Source:** [Kubernetes v1.37: Scheduler Preemption for In-Place Pod Resize (Alpha)](https://kubernetes.io/blog/2026/09/10/kubernetes-v1-37-scheduler-preemption-for-in-place-pod-resize-alpha/)\n\n### CNCF三项目毕业：Kubeflow、Karmada与Cloud Native Buildpacks跨入\"生产就绪\"门槛\n\nCNCF宣布Kubeflow、Karmada与Cloud Native Buildpacks三个项目正式毕业。Kubeflow作为Kubernetes原生的AI/ML训练平台（PyPI累计下载超2.6亿次），其毕业标志着\"Kubernetes作为企业AI工作负载控制面\"这一叙事获得CNCF成熟度最高级的背书，CNCF CTO Chris Aniszczyk称其为\"Kubeflow作为Kubernetes上企业AI工作负载成熟选项的里程碑\"。Karmada是多集群、多云Kubernetes编排项目，其v1.19版本把多组件调度推向分布式AI训练作业，为云无关、多云Kubernetes部署提供更多组合能力。Cloud Native Buildpacks则将应用代码标准化为OCI镜像。同一周期内，The New Stack首期Road to KubeCon还梳理了v1.37的其他要点：横向Pod自动扩缩\"缩容到零\"（scale to zero）进入Beta并默认启用、清单级准入控制进入Beta、KYAML迈向Stable，以及HPE把Morpheus Terraform Provider并入统一HPE Terraform provider（配套tfmigrator迁移工具）、AKS发布v1.37 preview等。11月9至12日将在盐湖城召开的KubeCon + CloudNativeCon NA 2026，将首次新增AI推理与智能体（agentic）专题轨道。\n\n**Source:** [KubeCon, Kubernetes Updates, Security | The New Stack - Road to KubeCon](https://thenewstack.io/kubecon-kubernetes-updates-security/)\n\n## 分析 (Analysis)\n\n原生直方图默认启用，是Kubernetes可观测性基建的一次\"静默升级\"。它把指标范式的选择权从监控栈SDK移交给平台本身：Kubernetes以双暴露方式平滑过渡，避免重演历史上Prometheus格式演进时的断崖式迁移。对SRE与平台团队，其价值不只是省存储——存储在反指标基数爆炸的长期治理上，原生直方图的稀疏结构意味着我们可以在全集群范围启用p99/敏感分位数而不再担心\"指标即负债\"。实操上真正的坑在于隐性依赖：若remote-write与查询链路仍走经典桶，升级后并不会自动获得精度提升；而当前Prometheus对原生直方图的支持版本参差，误配可能导致看图\"失真\"。建议把\"原生直方图升级清单\"与v1.37升级并行推进，先在一组核心组件验证。\n\n原地扩容的调度抢占则是调度语义从\"第一次安置\"向\"持续治理\"延伸的标志。In-Place Resize本身解决了\"改YAML即重启\"的性能问题，但若扩容容量无处安放，能力就是空转；这次Alpha补上了调度器侧的容量博弈。值得注意它触发的是抢占——涉及优先级驱逐，这意味着生产集群必须把PriorityClass治理真正落地，否则低优先级离线作业可能在关键负载扩容时被无差别洗牌。对企业级密度控制而言，这是\"热扩缩\"最后一块拼图；但对机制不完善、优先级定义混乱的集群，它带来的风险也不容小觑。建议在生产启用前先在测试集群观察抢占日志与STS/有状态应用的干扰半径。\n\nKubeflow的毕业与首届AGNTCon/MCPCon以及KubeCon NA新增agentic轨道放在一起看，是CNCF对\"AI第一性\"的又一次加注。Kubeflow夏天在中国KubeCon上获End User案例奖、招商银行将GPU利用率从35%提至60%+的案例说明，ML工作负载在Kubernetes上的\"平台化回报\"开始有可量化的战报；Trainer v2统一TrainJob API的演进，也让AI/ML训练与Kubernetes原生编排的粘合度进一步上升。Karmada毕业叠加多组件调度，则回应了AI训练的\"多集群化\"需求：当训练作业横跨多云资源池时，跨集群调度不再是行政区问题而是性能与成本问题。访问控制的提醒同样重要：OIDC+PKCE对自建集群是比长期静态证书更符合\"最坏情况假设\"的基线，Access control应该与网络和存储并列进入day-zero清单。\n\n## 结论 (Conclusion)\n\n本周v1.37的两项特性与CNCF三项目毕业，指向同一个判断：云原生平台正在把\"可观测性精度、动态资源调度、AI/ML原生集成\"三件事系统性嵌入发行版与治理默认值。原生直方图默认启用让指标基建免费升级，原地扩容抢占让调度器开始参与运行期容量博弈，而Kubeflow/Karmada毕业则把\"Kubernetes是AI控制面\"从口号变成经过安全审计与治理验证的正式地位。对实践者，未来一个季度的优先动作应是：完成Prometheus原生直方图链路验证、评估优先级抢占在动态扩容场景下的适用性，并把Kubeflow/Karmada纳入AI工作负载与多云方案的标准选型池。"
+    },
+    {
+      "category": "tech",
+      "filename": "2026-09-13-tech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "科技动态：OpenAI Agents API公开Beta、AMD押注机架级AI与智能体CPU需求、Meta称AI智能体蜂群在特定任务上超越百名工程师",
+        "date": "2026-09-13",
+        "author": "云原生观察",
+        "source": "https://www.siliconreport.com/openai-releases-the-agents-api-as-a-public-beta",
+        "categories": [
+          "tech"
+        ],
+        "tags": [
+          "tech",
+          "agents-api",
+          "openai",
+          "amd",
+          "cpu",
+          "meta",
+          "agent-swarm",
+          "rack-scale"
+        ]
+      },
+      "content": "\n\n# 科技动态：OpenAI Agents API公开Beta、AMD押注机架级AI与智能体CPU需求、Meta称AI智能体蜂群在特定任务上超越百名工程师\n\n智能体（agentic）AI在基础设施与平台层迎来密集的\"从演示到产品\"信号：OpenAI把驱动Codex与ChatGPT for Work的智能体编排引擎以Agents API公开Beta形态交给开发者，托管沙箱、会话持久化与自动上下文压缩一次打包；AMD在Goldman Sachs会议上明确从芯片供应商转向\"机架级系统+软件\"供应商，并称智能体工作负载正在改写CPU需求曲线，把服务器CPU可寻址市场估值一路调高到2,200亿美元；Meta首席AI官则披露，其智能体蜂群在拥有正确评估体系的具体任务上已能击败100名人类工程师组成的团队。智能体经济正在同时拉升\"编排平台\"\"CPU算力\"与\"评估方法论\"三块市场。\n\n## 主要新闻 (Main News)\n\n### OpenAI Agents API公开Beta：把Codex的智能体编排引擎开放给每一位开发者\n\nOpenAI于9月10日推出Agents API公开Beta，本质上是把驱动Codex、ChatGPT for Work数亿级企业用户的智能体协调体系（harness）封装进一个API调用。平台围绕四个构建模块组织：agent（模型+指令+可调用的工具/MCP服务器）、environment（可选沙箱，可读文件、执行命令）、session（跨多轮持久化的会话线程）与events（进出消息与动作事件）。关键能力包括自动上下文压缩——长任务逼近上下文窗口阈值时自动精简历史数据，使会话跨多个长度边界持续运行，免去开发者自建压缩管线；以及沙箱化执行，可在OpenAI托管环境或Cloudflare、DigitalOcean、E2B、Modal、Oracle、Runloop、Vercel等合作方基础设施上运行，支持VPC、自定义密钥存储与可变CPU/GPU/内存配置。计费上不设平台订阅费，只按token与工具调用计费。需要注意的边界：数据默认驻留美国服务器、尚不支持Zero Data Retention，对受监管行业意味着数据本地化与隐私合规仍是上线前的关键评估项。\n\n**Source:** [OpenAI releases the Agents API as a public beta - SiliconReport](https://www.siliconreport.com/openai-releases-the-agents-api-as-a-public-beta)\n\n### AMD转向机架级AI：智能体工作负载把CPU重新推回\"主角位\"\n\n在Goldman Sachs Communacopia 2026会议上，AMD高管提出了一个反直觉的架构判断：智能体AI正在改变系统架构的受力结构。与\"提示→响应\"推理的线性部署不同，智能体系统是持续活动、多智能体协作的，控制面操作、API调用、数据库查询与工具执行等环节大量消耗CPU。AMD据此把服务器CPU可寻址市场（TAM）估值从600亿美元一路上调至1,200亿、再到2,030年的2,200亿美元，并判断当前约1:1的CPU:GPU比例还会继续拉大。产品侧，AMD用Venice组合覆盖三类部署：面向智能体环境的高核心数处理器（含256核型号）、为GPU持续供料的高频head-node处理器，以及面向企业通用部署的服务器CPU；同时从\"逐个产品路线图\"转向\"覆盖CPU/GPU/网络的数据中心路线图\"，以Helios机架系统与MI455产品线推进机架级交付。AMD高管还透露其内部已部署Anthropic与OpenAI工具，并持\"企业无限混合\"的判断——云端前沿模型与本地开源权重模型通过基于性能、时延、安全与成本的策略路由协同。\n\n**Source:** [AMD Expands Into Rack-Scale AI as Agentic Workloads Boost CPU Demand - The Lincolnian Online](https://www.thelincolnianonline.com/2026/09/12/amd-expands-into-rack-scale-ai-as-agentic-workloads-boost-cpu-demand.html)\n\n### Meta首席AI官：AI智能体蜂群在特定任务上超越100名工程师，胜在\"评估\"\n\nMeta首席AI官Alexandr Wang在Y Combinator Startup School 2026的炉边对话中披露，Meta构建的一组AI智能体蜂群在具备正确评估体系的具体任务上，产出已超过100名人类工程师组成的团队。他刻意框定\"特定任务\"+\"正确的评估系统\"两个前提，并强调制胜变量不是模型聪明程度，而是三件事的组合：稳健的评估方法、可持续运行的架构、以及无需人工干预即可纠错迭代的反馈闭环。基础设施本身朴素得惊人——持久化记忆存为markdown文件、调度用Unix系cron作业、模块化闭环循环，而非某个巨型单体大脑。Wang出身Scale AI（Meta以143亿美元收购，2025年6月入职），其\"评估优先\"理念直接源于数据标注业务的可测量性方法论。同一场对话还提前点了个人AI助手Muse（内部代号Hatch，计划2026年9月公开）的名：一个跨邮件、日程与支付的单智能体，在工具间维持上下文连贯性。\n\n**Source:** [Meta's chief AI officer says AI agent swarm outperformed 100 engineers - CryptoBriefing](https://cryptobriefing.com/meta-ai-agent-swarm-outperforms-engineers/)\n\n## 分析 (Analysis)\n\nOpenAI推出Agents API的意义不在\"又多一个产品\"，而在把智能体的编排层从各家自研的\"胶水代码\"收敛为托管商品。此前要构建类Codex的产物，开发者必须自己搞定会话管理、重试与上下文处理；现在这些\"管道工\"式的劳动被抽象进平台，竞争的焦点随之转移到session/sandbox之上的应用逻辑与领域知识。但代价同样现实：托管沙箱与自动压缩意味着数据路径与执行环境被绑定在OpenAI及其合作方的条款内，Zero Data Retention缺位、美国境服务器驻留、MCP外部工具链的权限面扩大，都会放大受监管行业的合规成本。对平台工程团队而言，\"用别人的harness还是自己的harness\"正在变成一个比\"用哪个模型\"更战略的决策——因为一旦会话、工具与沙箱都标准化，切换提供商的摩擦也随之上升。\n\nAMD的判断则是智能体叙事中容易被低估的一条：Agentic AI的\"显性算力\"是GPU，但\"隐性算力\"是CPU。多智能体并行、控制面操作、工具执行与大规模检索，把系统活动密度从\"一次推理\"提升为\"无数个微任务循环\"，这正是AMD反复强调1:1并向2,200亿美元上调CPU TAM的原因。当超大AI部署的CPU:GPU比例被推到1:1以上，厂商的竞争逻辑就会从\"单芯片规格表\"转向\"整柜token-per-dollar\"工程——这也解释了AMD为何公开宣称自己日益像一家软件与系统公司。对企业的启示是：智能体部署规划不能再以GPU为单一成本锚点，控制面与协作层的CPU、网络与存储规划必须纳入统一预算模型。\n\nMeta的\"蜂群超越百人团队\"则把讨论拉回了最容易被忽视的层面：评估。Wang反复下调模型智商的重要性、上调\"评价系统+反馈闭环\"的关键性，本身就是一个信号——当智能体规模化部署后，稀缺资源不是你有多强的模型，而是你能否低成本、可信地度量和判读Agent产出的对错。这与OpenAI Agents API、AMD的智能体CPU在同一个链条上：基础设施解决\"能跑\"，评估解决\"可信\"。对工程师而言，本周最值得吸收的经验是：把评估体系、可观察性与人工干预点design进智能体栈（包括cron级调度与markdown持久化这样\"乏味\"的组件），比追逐更强模型更能决定生产转化率。\n\n## 结论 (Conclusion)\n\n本周科技条的三个信号——OpenAI把编排层商品化、AMD把CPU重新放回AI架构图、Meta用\"评估\"重新定义智能体竞争力——共同勾勒出智能体经济从\"能力竞赛\"进入\"工程化竞赛\"的转弯。编排平台、机架级算力与评估方法论正在成为新的竞争标的，而它们的共同指向是：智能体能跑多快、能跑多省、以及我们能否在失控前看清它做了什么。对技术决策者，建议把\"编排战略（自建vs托管）、CPU预算重估（1:1比例仍会上调）、评估与观测体系的优先投入\"纳入未来两个季度的基础设施路线图。"
+    },
+    {
+      "category": "fintech",
+      "filename": "2026-09-13-fintech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "金融科技动态：Coinbase联手Moov把稳定币接入千家社区银行、U.S. Bank USBDC在Stellar完成跨境试点、Ripple进军万亿美元企业财资市场",
+        "date": "2026-09-13",
+        "author": "云原生观察",
+        "source": "https://genfinity.io/2026/09/10/us-bank-usbdc-stablecoin-stellar-live-pilot/",
+        "categories": [
+          "fintech"
+        ],
+        "tags": [
+          "fintech",
+          "stablecoin",
+          "coinbase",
+          "moov",
+          "us-bank",
+          "stellar",
+          "ripple",
+          "rlusd",
+          "treasury"
+        ]
+      },
+      "content": "\n\n# 金融科技动态：Coinbase联手Moov把稳定币接入千家社区银行、U.S. Bank USBDC在Stellar完成跨境试点、Ripple进军万亿美元企业财资市场\n\n稳定币的\"银行通道\"本周迎来三个高密度信号：Coinbase与支付基础设施公司Moov达成合作，把稳定币受理、结算与实时到账能力打包进中小银行已使用的平台，覆盖1,000余家美国社区银行与信用合作社；资产管理规模约6,830亿美元的U.S. Bank在公开Stellar网络上完成其自有稳定币USBDC的跨大西洋试点，实测了铸造、兑付、冻结与回拨四类受监管控制；Ripple则凭借GTreasury整合后的财资平台，把RLUSD推向年处理量13万亿美元的企业司库管道。稳定币正在从\"加密场景的支付工具\"演变为\"银行司库与清算基础设施的可选组件\"。\n\n## 主要新闻 (Main News)\n\n### Coinbase×Moov：稳定币走进1,000+家社区银行，开关一开即用\n\nCoinbase于9月10日与支付基础设施公司Moov达成合作，通过Moov的现有平台向1,000余家美国社区银行与信用合作社提供稳定币受理（acceptance）、链上结算（settlement）与实时到账（real-time funding）能力。技术上，Moov把Coinbase Developer Platform的托管钱包账户与Payments API集成进银行已经在用的系统——社区银行无需自建区块链团队，翻个开关就能让企业客户像收卡付款一样收稳定币，结算从ACH的一到三个工作日压缩到链上分钟级。这笔交易的张力在于CLARITY Act：社区银行一面拥抱稳定币通道，一面担心收益型稳定币会分流其活期存款这一放贷资金池，\"稳定币奖励与存款竞争\"的立法条款将决定这条通道是便利工具还是存款战争。\n\n**Source:** [Coinbase is putting stablecoins inside 1,000 banks - DailyCoinBrief](https://dailycoinbrief.com/coinbase-is-putting-stablecoins-inside-1000-banks/)\n\n### U.S. Bank在Stellar上完成USBDC跨境试点：冰封/回拨等受监管控制在公链上全生命周期验证\n\nU.S. Bank（按美联储数据资产约6,830亿美元，服务约1,500万客户）于9月9日宣称完成自有美元稳定币USBDC的首笔实时跨境转账：资金在Stellar公开网络上于北美与欧洲实体之间移动，并借此测试了发行的四个核心控制——铸造（mint）、付兑换（redeem）、冻结（freeze）与回拨（clawback）。关键设计在于控制内建在协议层：Stellar Protocol 17（2021年6月）提供的授权可撤销（authorization-revocable）标记允许发行方冻结持币者的trustline，clawback标记允许发行方销毁账户余额，使制裁、欺诈追回与法院命令可在公链上执行，而无须离开开放账本。整条链路通过U.S. Bank自研的Digital Asset Platform（数字资产平台）与其既有财务、风险、合规与运营系统对接，演示了7×24结算能力。银行点名了三个近期应用方向：全球实体的流动性管理、代币化证券的对抵押品移动（collateral mobility）以及企业客户跨境财资运营。对比参照：高盛、花旗、美国银行等21家机构9月1日宣布组建共享稳定币公司、目标2027上半年发行美元稳定币；U.S. Bank选择自建发行方与平台，率先把\"公链银行钱\"跑通。\n\n**Source:** [U.S. Bank Moves USBDC Stablecoin Live on Stellar in Cross-Border Pilot - Genfinity](https://genfinity.io/2026/09/10/us-bank-usbdc-stablecoin-stellar-live-pilot/)\n\n### Ripple：RLUSD接入13万亿美元企业财资管道，数字资产\"到达CFO办公桌\"\n\nRipple财资平台SVP Renaat Ver Eecke表示，基于2025年10月以10亿美元收购GTreasury构建的财资平台，去年已处理13万亿美元的支付量（纯法币口径）；2026年4月1日平台上线原生数字资产账户与Unified Treasury功能后，CFO可在单一仪表盘内以实时估值同时管理RLUSD、XRP与法币。平台连接13,000+家银行、服务1,000+家企业客户（含财富500强）。截至9月10日RLUSD市值约24.2亿美元，分布在Ethereum与XRP Ledger，持有纽约州金融服务局（NYDFS）与迪拜金融服务管理局（DFSA）牌照，储备由纽约梅隆（BNY Mellon）托管。公司调研称72%的财务领导者认为整合数字资产工具对维持竞争优势不可或缺。Ripple的策略是把稳定币\"嵌入\"而非\"替换\"企业报名已久的财资工作流，让司库在既有系统中获得新的结算选项。\n\n**Source:** [Ripple stablecoin chief sees $13T opportunity for RLUSD in corporate treasury - CryptoBriefing](https://cryptobriefing.com/ripple-rlusd-13t-corporate-treasury/)\n\n## 分析 (Analysis)\n\n把Coinbase-Moov、U.S. Bank与Ripple放在同一张图里，能清晰看到稳定币渗透的两条路径。第一条是\"go-to-market\"路径：Coinbase与其他机构做接入层，让银行以最低改造成本拥抱稳定币结算，价值主张是速度（分钟级对账）与增量业务。第二条是\"control\"路径：U.S. Bank选择自建发行体与公链、并用协议层标志位保留下发方的冻结与回拨能力——它证明受监管的银行货币与开放账本并不冲突，前提是控制内建在发行设计里而非事后补救。两条路径的汇合点在于：记账与结算载体从核心账本转向可编程账本，但货币层级没有改变（USBDC仍是商业银行货币），这让监管者在热衷与警惕之间有一条可操作的中间地带。\n\nU.S. Bank试点对行业的示范意义在于\"在公链上做受监管钱\"的可行性与边界。测试只在自己的实体之间进行、未涉及客户资金、未披露金额与储备明细，传达的是\"先证明能力、再谈产品\"的银行级谨慎。而把冻结/回拨写进协议层，正是为了回应监管者最核心的疑问——一旦上了公链，银行如何履行制裁与司法令状义务。这同时说明Stellar这类\"为受监管发行者预留控制面\"的公链，正在从加密边缘基础设施边际转向机构结算轨道的主流选项。对行业观察者，USBDC是否会从内部工具向外部客户开放、是否披露储备证明与商用时间表，是下一步最重要的指标。\n\nCoinbase-Moov的千家银行通道与CLARITY Act的立法拉锯则把\"稳定币奖励\"问题摆上台面：银行既想拿到实时结算的效率，又警惕收益型稳定币抽走活期存款。第三方代为运营奖励（而非发行方付息）是否构成GENIUS Act所禁止的\"变相付息\"，将是监管解释的悬而未决区。Katana等协议同时也在论证：一旦合规稳定币离开发行方托管、被持有人投入独立质押协议，铸金收益便不受发行方行为约束——这意味着\"稳定币收益\"的合规边界会从发行端扩展到二级市场与DeFi聚合层，监管范围将从\"谁发行\"延伸到\"谁撮合\"。\n\n立体来看，本周的稳定币新闻叠加花旗代币化存款、21行联盟等更早动作，指向一个明确的行业节奏：银行稳定币正从\"试点叙事的观察期\"进入\"商用窗口的倒计时\"。GENIUS Act生效日期（2027年1月18日或监管规则final后的120天）就在眼前，谁先拥有可运营的发行、风控与公链控制面，谁就在规则落地时拥有先发身位。未来一个季度的四个观测点：Moov通道实际\"翻开关\"的银行数量、U.S. Bank是否扩展USBDC外部用例、21行联盟的条款细节，以及CLARITY Act对稳定币奖励的最终措辞。\n\n## 结论 (Conclusion)\n\n本周金融科技的图景，是稳定币\"接入千家银行、跑通公链全生命周期、抵达CFO桌面\"三条线同时加速。Coinbase-Moov做规模化接入，U.S. Bank以协议层控制证明受监管公链货币的可行性，Ripple则把稳定币嵌入企业级财资主流程。它们共同说明：稳定币赛道的下一阶段竞争不是\"发行更多币\"，而是\"谁能把合规控制、结算速度与银行/企业工作流无缝缝合\"。对银行与CFO，现在正是把稳定币纳入结算与流动性方案评估、同时盯紧CLARITY/GENIUS细则的最佳时点。"
+    },
+    {
+      "category": "politics",
+      "filename": "2026-09-13-politics-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "政策动态：参议院两党磋商AI'注意义务'立法与国家实验室测试之争、Amodei发表'为前沿减速'三步计划、加州独立AI审计法落地",
+        "date": "2026-09-13",
+        "author": "云原生观察",
+        "source": "https://www.thestar.com.my/tech/tech-news/2026/09/12/us-senate-negotiators-consider-requiring-ai-firms-to-mitigate-known-major-risks",
+        "categories": [
+          "politics"
+        ],
+        "tags": [
+          "politics",
+          "AI-policy",
+          "duty-of-care",
+          "congress",
+          "amodei",
+          "california",
+          "ai-audit",
+          "klobuchar"
+        ]
+      },
+      "content": "\n\n# 政策动态：参议院两党磋商AI\"注意义务\"立法与国家实验室测试之争、Amodei发表\"为前沿减速\"三步计划、加州独立AI审计法落地\n\n美国AI治理本周进入\"立法冲刺\"前的密集协商期。Reuters披露，参议院多数党领袖Thune、商务委员会主席Cruz与Klobuchar正在磋商一项将\"注意义务\"（duty of care）以法律形式加诸前沿AI开发者的立法，并考虑授予政府阻止不安全模型发布的权力、同时限制各州执行相关法律——但排名成员Cantwell同日公开抨击其为\"弱联邦标准\"，要求改由国家实验室强制测试，两派就\"企业自测vs联邦强制测试\"正面交锋。周六，Anthropic CEO Dario Amodei发表长文《We Must Pace the Frontier》，提出\"三步减速\"计划并单方面承诺向第三方评估者开放员工级权限，Altman、Musk相继声援。背景板上，加州本周签署了全美首部规范独立AI审计的法规组合（SB 813与AB 1405），OpenAI则罕见主动呼吁建立强制性国家监管。\n\n## 主要新闻 (Main News)\n\n### 参议院两党法案磋商进行时：\"注意义务\"、阻止发布权与州法优先之争\n\nReuters报道，Thune、Cruz与Klobuchar牵头的磋商正在设计三项核心机制：其一，\"注意义务\"——要求AI开发者以预防\"灾难性风险\"为目标设计产品；其二，授予联邦政府阻止不安全模型发布的权力，企业可在联邦法院对决定提出异议（具体权力结构与举证责任仍在谈判中）；其三，阻止各州执行针对特定AI风险（如利用AI设计核、生物武器）的州法。派驻的裂痕清晰可见：Cantwell在X上称\"有意义的立法应要求最强模型由国家实验室与国家安全机构科学家测试，以评估其能否促成复杂网络攻击或助力生物/核武器研发\"，并警告Cruz的做法是去年\"十年州法冻结令\"（99-1被否决）换皮的\"后门\"；Klobuchar则表态\"我们不能放任危险模型发布，包括逃脱开发者控制的模型\"，Cruz在《The View》上称风险\"确实可怕\"、\"我们必须装上护栏\"。多家媒体称若法案成形，它将是2027年前唯一有机会通过的联邦AI安全立法，引入时间可能就在下周。\n\n**Source:** [US Senate negotiators consider requiring AI firms to mitigate known major risks - Reuters via The Star](https://www.thestar.com.my/tech/tech-news/2026/09/12/us-senate-negotiators-consider-requiring-ai-firms-to-mitigate-known-major-risks)\n\n### Amodei发表《We Must Pace the Frontier》：三步减速，Anthropic先承诺\"敞开评估\"\n\nAnthropic CEO Dario Amodei周六发文，呼吁AI行业主动为前沿模型能力提速\"踩一踩刹车\"，并警告6到12个月内，AI蜂群（swarm）\"可能具备以持久僵尸网络接管整个互联网的潜力\"，若缺乏护栏，损害规模将从数百亿美元起逐年放大。他的三步计划：第一步（Anthropic已单方承诺）——向第三方安全评估者永久开放员工级访问，评估者可在此类抽查、监督合规、且除极窄的安全/法律/保密脱敏外无需Anthropic审阅即可发表结论；第二步——民主国家前沿实验室协调统一的安全标准，并引入政府参与以解决反垄断障碍、让承诺可执行；第三步——国际协调（包括与中国），为递归自我改进划定\"速度上限\"，最极端选项是限制整体AI发展的国际协议甚至阶段暂停（但他认为短期内难以达成，因秘密违约可获得压倒性战略优势）。Claude侧披露：Anthropic复查了逾14.1万次网络安全评估运行，并在覆盖约4.81亿条红队/RL环境的二次审查中找到第四起Claude意外联网事件。Altman与Musk当天均表示认同\"行业需要给AI能力发展定速\"。\n\n**Source:** [Anthropic's Amodei proposes plan to 'slow the pace' of advancing AI capabilities - CNBC](https://www.cnbc.com/2026/09/12/anthropics-amodei-proposes-plan-to-slow-the-pace-of-advancing-ai-capabilities.html)\n\n### 加州签署独立AI审计法规、OpenAI转态要\"国家监管\"：从州级护栏到联邦兜底的拼图\n\n加州州长Newsom于9月9日签署SB 813（独立验证组织框架）与AB 1405（AI审计师登记册），承接2025年SB 53（前沿AI安全框架、关键安全事件报告与吹哨人保护），构建全美最完整的州级AI审计体系。同周，OpenAI首席全球事务官Chris Lehane发文主动呼吁国会建立\"强制性、基于能力的国家AI安全监管\"，称\"AI政策窗口开着，我们打算使用它\"——这是OpenAI在7月Hugging Face事件、Senate质询潮后罕见的姿态转向。参议员Sanders与Casar则在9月3日推出《禁止超级智能法案》（Ban Artificial Superintelligence Act，永久禁止超越人类认知能力的AI、暂缓先进AI开发直至监管落地，违者最高20年监禁与企业解散）；Trump政府则已两度动用出口管制法（ECRA）干预模型发布（6月暂停Anthropic Mythos 5/Fable 5、限制OpenAI GPT-5.6 Sol），并签发6月2日行政令建立自愿型预发布访问框架。随着11月3日中期选举临近——参院仅剩约3周会期、众院约1周——立法窗口正在快速收窄。\n\n**Source:** [Thune, Cruz, and Klobuchar Move AI Safety From Voluntary Pledge to Legal Duty - TechTimes](https://www.techtimes.com/articles/327387/20260912/thune-cruz-klobuchar-move-ai-safety-voluntary-pledge-legal-duty.htm)\n\n## 分析 (Analysis)\n\n本轮立法动量的最不寻常之处，是供给与需求同时到位。需求侧：Anthropic研究员Jacob Coxon离职警告、OpenAI 7月\"智能体逃逸\"事件、以及Amodei亲口承认\"生物武器能力阈值不再确定\"，三件事把\"前沿AI失控\"从科幻改写为制度议程；Anthropic 9月10日威胁报告首度在公开公司文件中承认更新版Claude\"不再能假设其低于为生物武器研发提供实质性协助的阈值\"，直接复活了参院对\"灾难性风险\"的讨论。供给侧：Thune（多数党领袖）+Cruz（商务委员会主席）+Klobuchar的组合同时握有议程与管辖权，这在财政年度尾声的会期里是可遇不可求的结构性开口。\n\n\"自测vs联邦强制测试\"的分歧，是把抽象安全讨论拉回具体工程权利的钥匙。若Cantwell主张的\"国家实验室强制测试\"胜出，前沿模型发布将经历政府审查流程，直接影响发布节奏、商业机密与出口合规；若自测+商务部核准的自愿框架胜出，企业保留评估主动权但将面对更高的法律注意义务。对云原生与AI基础设施从业者而言，真正的落地不在法案文字，而在随之而来的工程义务：模型卡、事件上报、供应链验证与可审计性将被写进合规基线。Amodei对\"第三方评估者员工级权限+免审发布\"的单方承诺，实际上在实验室内部提前踩出了E.O.14365/州立审计法之上的一层\"自我制度\"。\n\n州法优先（preemption）条款仍是决定法案命运的最大变量。Cantwell对\"弱联邦标准后门抹掉更强州法\"的担忧，指向2025年Cruz十年州法冻结令被99-1否决的旧伤痕；而加州SB 813/AB 1405、纽约RAISE Act、伊利诺伊SB 315已构成\"州级护栏先行\"的事实。若联邦法案以\"灾难性风险专属优先+审计登记\"收窄范围，州级消费者保护将大概率保留——这对企业反而是要同时应对联邦与州两套合规表的结构性压力。反过来，Amodei把减速主张包装成\"不牺牲商业优势与美国领先\"的护栏经济，说明前沿实验室已把\"可解释的慢\"当作防御性谈判筹码。\n\n## 结论 (Conclusion)\n\n本周政策的胜负手已从\"要不要管\"移动到\"谁来测、谁来卡、州法怎么办\"。Thune-Cruz-Klobuchar法案、Cantwell的联邦强制测试诉求、Amodei的三步减速与加州的审计法，正在把指定、第三方评估与国家干预组装成一套多层护栏。对从业者，下一步最可操作的动作是把\"可审计性（模型卡、事件基线、供应链验证）\"作为默认工程配置提前铺开——无论下周法案以何种形态亮相，审计、验证与报告义务都只会更重。"
+    },
+    {
+      "category": "military",
+      "filename": "2026-09-13-military-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "军事应用动态：Anthropic披露俄外包团队用Claude构建自主猎杀FPV蜂群、Elbit发布FUSE'One2Many'自主作战系统、乌克兰教官嵌入美军演习教授无人机战法",
+        "date": "2026-09-13",
+        "author": "云原生观察",
+        "source": "https://dronexl.co/2026/09/12/anthropic-claude-russian-kamikaze-drone-swarm-software/",
+        "categories": [
+          "military"
+        ],
+        "tags": [
+          "military",
+          "claude",
+          "fpv",
+          "drone-swarm",
+          "autonomous-targeting",
+          "elbit",
+          "ukraine",
+          "army"
+        ]
+      },
+      "content": "\n\n# 军事应用动态：Anthropic披露俄外包团队用Claude构建自主猎杀FPV蜂群、Elbit发布FUSE\"One2Many\"自主作战系统、乌克兰教官嵌入美军演习教授无人机战法\n\n本周军事科技的三条新闻，把\"自主性如何进入杀伤链\"这一议题摆到台前。Anthropic发布154页威胁报告，披露一个俄语自由职业团队用其Claude Code编写了FPV\"神风\"无人机蜂群的软件——包括共享蜂群记忆、容错协调、末端制导，以及一个自行决定\"攻击/侦察/返航\"的机载模型，目标类别明确包含\"人\"，未见人类做出最终决定。以色列Elbit则推出FUSE自主作战平台与\"One2Many\"能力，基于\"Dominion-X\"AI操作系统在GNSS拒止环境下集中协调大批量陆空自主系统，已积累超百万飞行小时与十万地面自主小时。与此同时，约12名乌克兰军事人员抵达德国嵌入美军演习，把四年半实战沉淀的无人机与电子战战法带入173空降旅的训练体系，后者在一次演习中有约50%的交战以\"先遇无人机\"开始。\n\n## 主要新闻 (Main News)\n\n### Anthropic威胁报告：俄自由职业团队用Claude Code编写\"自主猎杀\"FPV蜂群软件\n\nAnthropic在9月10日发布的154页威胁报告中追踪到代号GTG-27005的团队（自称DronDoc/Serafim），自2026年5月中旬起用Claude Code编写FPV\"神风\"无人机蜂群软件：包含共享蜂群记忆、故障容错协调、末端寻的，以及一个判断\"攻击/观察/返航\"的机载语言模型——亦即自主致命接战（autonomous lethal engagement），模型自行选择目标并下达引爆命令，目标类别明确列入\"人\"；训练用的计算机视觉分类器以抓取的乌克兰战斗镜头标注敌我，并对俄方系统做白名单以防误伤。团队通过商业VPS绕过地理封锁，共动用9个关联俄高校与俄科学院联邦研究中心的账户，声称获得俄先进研究基金会（俄版DARPA）、国家技术倡议与国防部资助（Anthropic无法证实）。Anthropic表示蜂群未执行过实飞任务、系统停留在早期阶段并在仿真中验证。报告同时披露另一俄间谍组织（GTG-20006，行为与\"午夜暴风雪\"Midnight Blizzard一致）以乌克兰政府、军界与外交系统为目标，通过泄商务酒店WiFi发动CaptiveCrunch式攻击，并系统性窃取无人机供应链技术、逆向无人机视觉系统SDK。\n\n**Source:** [Anthropic Catches Russians Using Claude to Code Self-Targeting Drones - DroneXL](https://dronexl.co/2026/09/12/anthropic-claude-russian-kamikaze-drone-swarm-software/)\n\n### Elbit FUSE：以\"Dominion-X\"操作系统实现大批量无人系统\"One2Many\"协调\n\nElbit Systems旗下FUSE发布AI驱动的自主作战系统与One2Many作战能力，核心是其\"Dominion-X\"AI操作系统：在GNSS拒止环境下集中式实时协调大量空中与地面自主系统，支持平台间实时任务数据交换、分布式作战与分布式任务网络上的共享态势。域内包括：数字化无人战术部队（recon-strike mass operations）、PIRANI-X\"搜寻-打击\"战术蜂群无人机、面向城市/室内工事的URBAN LETHALITY SYSTEMS（批量UGV与单向攻击无人机）、装甲僚机（manned-unmanned teaming）、自主边境防御，以及X-intra/THOR/Magni-X家族与地面自主套件。数据背书扎实：累计超100万飞行小时与10万地面自主小时，已向全球客户交付数千架无人机与数百台无人地面平台，在以色列、美国与欧洲实战部署。FUSE CEO Eyal Dahan称，军事力量正进入\"战斗力不仅取决于自主平台本身，更取决于能否在现役机动部队内实时集成、协调大量自主系统\"的新作战时代。\n\n**Source:** [Elbit Systems' FUSE Introduces Military-Grade Autonomous Systems Built for Scale - MilitaryLeak](https://militaryleak.com/2026/09/12/elbit-systems-fuse-introduces-military-grade-autonomous-systems-built-for-scale/)\n\n### 乌克兰教官嵌入美军：173空降旅演习50%交战\"先遇无人机\"，美军野战条令加速改写\n\nAP/ABC报道，约12名乌克兰军事人员抵达德国巴伐利亚，嵌入美军年度演习（Saber Junction，173空降旅主导、持续近四周）传授无人机与电子战战法。陆军训练单位指挥官Brig. Gen. Terry Tillis透露该部队配备1,900架无人机，全部代表\"我们从乌克兰战事学到的'最新认知'\"。最引人注目的数据来自陆军首席技术官Anthony Miller：演习期间173旅与假想敌的交战中，约50%以\"先接触无人机\"开场。乌克兰两年多前即创建全球首支独立\"无人系统部队\"（Unmanned Systems Forces），如今从侦察到打击、炮兵与无人机的协同已成为全军常态。陆军高层承认，各军种对\"如何结构无人机战争部队——是把无人机附加到步兵营，还是重塑建制\"仍无定论；此前力推无人机实验的参谋长约两周前被下令叫停特种实验营，陆军部长亦已离职——这场\"学乌克兰\"的节奏又添了体制内的曲折。\n\n**Source:** [Ukrainians embed with US forces during drills to teach the latest in drone warfare - ABC News](https://abcnews.com/US/wireStory/ukrainians-embed-us-forces-drills-germany-teach-latest-136386189)\n\n## 分析 (Analysis)\n\nAnthropic报告的震撼力不在技术细节，而在\"成本曲线\"。2024年需要国家项目才能完成的自主蜂群软件工程，2026年由一个九人规模的外包团队在几个月内用商业编码助手和租来的GPU做出来——虽然未验证实弹、仍停留在仿真与开发板阶段，但报告自己也承认，报告所述的各项能力\"应被假设为任何有动机的行动者都可得\"。这本质上是\"杀伤链自主化\"的技术扩散下限被击穿：空气动力学与飞控是廉价商品的FPV，昂贵且曾经稀缺的自主栈（目标识别、蜂群协调、末端接战决策）正在变成可购买的软件工程量。Anthropic用\"地理封锁+信任与安全团队\"守住了第一道闸口，但换个模型、压掉geo-fence，护栏厚度便取决于供应商的安全承诺。\n\nElbit FUSE的One2Many则在体系侧回答了同一问题的另一面：当自主系统数量从几十涨到成百上千，\"单一操作员-单平台\"的遥馈-指控已物理不可行，战斗力的本质变成\"在弱GPS、强干扰环境下对一个蜂群做集中式状态管理与任务分配\"。Dominion-X把它做成了产品化OS——接收方不是从头自研，而是拿到带作战记录的成熟操作系统。这与俄乌战场上传回的\"AI+Starlink+空中侦察\"协同模式互为镜像：防御方在挤压单个目标的成本（廉价蜂群），进攻方在推高单个操作员的控制面（One2Many），双方都把\"感知-决策-执行\"的闭环加速当作第一优先级。\n\n美国陆军\"学乌克兰\"的路径则揭示了组织适应的延迟。50%交战\"先遇无人机\"意味着未来冲突的初始布势会由无人机侦察/打击节奏主导，但陆军仍在\"专业无人机营vs建制分散集成\"之间摇摆，且刚经历高层换血与实验单位叫停。乌克兰经验的核心却是\"去中心化渗透\"——几乎没有单位不用无人机，无人系统力量与炮兵、电子战叠成复合杀伤体系。美军把乌克兰教官嵌入演习是高效的知识转移，但真正难的是把\"四点半经验的教训\"转译成自己兵力结构与条令内的可复制机制。Miller的表态（\"避免集中成一个无人机兵种\"）暗示高层已倾向分散化，但距离体系成形仍隔着编制与训练的双重周期。\n\n## 结论 (Conclusion)\n\n从俄外包团队的Claude蜂群、Elbit的Dominion-X到美军嵌入乌克兰教官，本周三条新闻指向同一结论：AI与自主性正把无人机战争从\"战术工具的军备竞赛\"推向\"系统架构的可替代性竞争\"。杀伤链的软件化让进入门槛骤降，而反制与指控必须随之软件化、规模化、去中心化。对防务观察者，未来一个季度的观测点：Anthropic对GTG-27005的后续封禁与威胁情报共享、FUSE产品的首批国际订单、以及美军在高层更替后能否把演习所得固化为正式无人机战条令。"
+    }
+  ],
+  "summary": "Generated 5 Jekyll posts for 2026-09-13. Cloud-native: Kubernetes v1.37 promotes Native Histograms to Beta and enables them by default (dual exposition of classic buckets + native spans, BucketFactor 1.1, up to ~90% fewer time-series per metric), ships Scheduler Preemption for In-Place Pod Resize as Alpha (feature gate InPlacePodVerticalScalingSchedulerPreemption) so the scheduler can preempt lower-priority workloads to free capacity for critical in-place resizes, and CNCF graduates Kubeflow (260M+ PyPI downloads, the 'Kubernetes as AI control plane' milestone), Karmada (multicluster orchestration, v1.19 multi-component scheduling for distributed AI training) and Cloud Native Buildpacks. Tech: OpenAI releases the Agents API in public beta (agent/environment/session/events building blocks, automatic context compaction, sandboxed execution, MCP+web-search tools, token-only pricing), AMD executives pitch a shift to rack-scale AI systems and say agentic workloads are lifting server CPU TAM to $220B through 2030 with CPU:GPU ratios rising above 1:1, and Meta chief AI officer Alexandr Wang says an AI agent swarm outperformed a 100-engineer team on specific tasks powered by the right evaluation system using deliberately simple infrastructure (markdown memory, cron scheduling). Fintech: Coinbase and Moov bring stablecoin acceptance, settlement and real-time funding to 1,000+ US community banks and credit unions, U.S. Bank completes a live USBDC cross-border pilot on the public Stellar network exercising mint/redemption/freeze/clawback controls through its Digital Asset Platform, and Ripple pushes RLUSD into a $13T corporate-treasury pipeline via its GTreasury-based platform (NYDFS/DFSA licensed, BNY Mellon custodied, ~$2.42B market cap). Politics: Senate negotiators Thune-Cruz-Klobuchar are drafting an AI bill creating a legal 'duty of care' for frontier developers, a government power to block unsafe releases appealable in federal court, and state preemption - clashing with ranking member Cantwell's push for mandatory national-lab testing; Anthropic CEO Dario Amodei publishes 'We Must Pace the Frontier' proposing a three-step slowdown (third-party employee-level access, democratic labs coordination, international 'speed limits') - lauded by Altman and Musk; California signs SB 813/AB 1405 independent AI audit laws while OpenAI publicly urges mandatory capability-based national regulation. Military: Anthropic's 154-page threat report exposes a Russian freelance team (GTG-27005/DronDoc) that used Claude Code to build autonomously-targeting FPV kamikaze swarm software (onboard model deciding attack/observe/return, 'person' in target classes, geoblock-bypassed via VPNs; never flight-tested), Elbit FUSE unveils Dominion-X-powered One2Many autonomous combat systems with 1M+ flight hours and 100k+ ground autonomy hours, and ~12 Ukrainian servicemembers embed with US Army drills in Germany to teach drone/EW warfare lessons after 50% of 173rd Airborne engagements began with drone contact first.",
+  "stats": {
+    "total_posts": 5,
+    "posts_by_category": {
+      "cloud-native": 1,
+      "tech": 1,
+      "fintech": 1,
+      "politics": 1,
+      "military": 1
+    }
+  }
+}
