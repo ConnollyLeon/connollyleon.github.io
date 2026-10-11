@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "category": "cloud-native",
+      "filename": "2026-10-11-cloud-native-news.md"
+    },
+    {
+      "category": "tech",
+      "filename": "2026-10-11-tech-news.md"
+    },
+    {
+      "category": "fintech",
+      "filename": "2026-10-11-fintech-news.md"
+    },
+    {
+      "category": "politics",
+      "filename": "2026-10-11-politics-news.md"
+    },
+    {
+      "category": "military",
+      "filename": "2026-10-11-military-news.md"
+    }
+  ],
+  "summary": "Generated 5 Jekyll posts for 2026-10-11 covering cloud-native, tech, fintech, politics and military news. Topics include containerd security vulnerabilities and CNCF Karmada graduation, OpenAI-NVIDIA strategic partnership for 10GW AI infrastructure and enterprise AI governance, stablecoin regulatory frameworks and institutional settlement standards, AI governance and data privacy policy evolution, and counter-drone defense systems including CLWS laser weapons.",
+  "stats": {
+    "total_posts": 5,
+    "posts_by_category": {
+      "cloud-native": 1,
+      "tech": 1,
+      "fintech": 1,
+      "politics": 1,
+      "military": 1
+    }
+  }
+}
