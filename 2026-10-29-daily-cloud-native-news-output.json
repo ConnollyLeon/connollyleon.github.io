@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "category": "cloud-native",
+      "filename": "2026-10-29-cloud-native-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "云原生技术动态：Volcano队列公平调度、Akamai智能体沙箱与Cast AI自主优化",
+        "date": "2026-10-29",
+        "author": "云原生观察",
+        "source": "https://www.cncf.io/blog/2026/10/28/volcano-v1-16-released-namespacequeue-fairshare-and-a-broader-hypernode-ecosystem/",
+        "categories": ["cloud-native"],
+        "tags": ["volcano", "kubernetes", "scheduling", "ai-agents", "webassembly", "cloud-native"]
+      },
+      "content": "云原生技术动态：Volcano队列公平调度、Akamai智能体沙箱与Cast AI自主优化。Volcano v1.16引入NamespaceQueue CRD，以capability、deserved、guarantee、priority、reclaimability和dequeue策略表达租户资源权利，Fairshare插件采用Slurm启发的历史用量衰减模型，HyperNode控制器与API可独立部署；Akamai推出Akamai Inference与Agent Sandbox，提供OpenAI兼容的托管模型服务（12个开放权重模型、8B至2.8T参数），并让智能体生成的代码在基于Spin的WebAssembly隔离环境中执行，限制计算、内存、出站连接与系统能力；Cast AI获Frost & Sullivan 2026北美技术创新领导力认可，其智能体式Kubernetes优化正向GPU与推理token成本扩展。"
+    },
+    {
+      "category": "tech",
+      "filename": "2026-10-29-tech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "科技前沿：微软从OpenAI获得百亿美元收入、Alphabet云业务翻倍与Gemini 4 Carbon发布",
+        "date": "2026-10-29",
+        "author": "云原生观察",
+        "source": "https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai",
+        "categories": ["tech"],
+        "tags": ["microsoft", "openai", "alphabet", "google-cloud", "gemini", "ai"]
+      },
+      "content": "科技前沿：微软从OpenAI获得百亿美元收入、Alphabet云业务翻倍与Gemini 4 Carbon发布。微软2027财年第一季度从OpenAI商业安排获得100亿美元收入，占923亿美元总营收近11%，2026财年相关收入241亿美元，应收款72亿美元，持股降至24%，OpenAI需分享收入至2030年但设上限；Alphabet第三季度营收1275.77亿美元同比增长25%，Google Cloud收入307.09亿美元增长103%、运营利润111.21亿美元，资本开支513.55亿美元导致自由现金流负90.65亿美元，股价盘后一度跌8%；Google发布Gemini 4 Carbon，Artificial Analysis指数59分排名第一，SEC-bench Pro 88.2%、ExploitGym 54.8%、CWE-bench 71.0%，安全代码生成成功率较Argon提升逾2倍，定价输入2美元/百万token、输出10美元/百万token，先向网络防御人员开放并参与美国政府预发布测试。"
+    },
+    {
+      "category": "fintech",
+      "filename": "2026-10-29-fintech-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "金融科技动态：Guidewire 21亿美元收购hyperexponential、智能体理赔融资与Ripple获OCC牌照",
+        "date": "2026-10-29",
+        "author": "云原生观察",
+        "source": "https://www.guidewire.com/about/press-center/press-releases/20261027/guidewire-signs-definitive-agreement-to-acquire-hyperexponential",
+        "categories": ["fintech"],
+        "tags": ["insurtech", "ai-agents", "underwriting", "payments", "stablecoin", "fintech"]
+      },
+      "content": "金融科技动态：Guidewire 21亿美元收购hyperexponential、智能体理赔融资与Ripple获OCC牌照。Guidewire以17亿美元现金基础对价加最高4亿美元或有对价收购伦敦AI承保定价平台hyperexponential，后者支持逾750亿美元商业财险保费，交易通过10亿美元定期贷款与自有现金支付，预计2027财年第二季度完成；Casap完成5600万美元B轮，Base10领投、Experian与Synchrony战略参投，累计融资9000万美元，其争议处理智能体将首次方欺诈损失降低最高51%、拒付胜率96%、解决时间从90天缩短至8天；Hyphenate获4500万美元A轮，Nexus领投，累计融资5400万美元，称12个月收入增长86倍、90%日常财务工作由智能体完成；Ripple产品收入年化逼近9亿美元，OCC最终批准其国家信托银行，RLUSD市值达26亿美元、年内上涨逾88%。"
+    },
+    {
+      "category": "politics",
+      "filename": "2026-10-29-politics-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "政策动态：波兰AI法案执法生效、Anthropic建议司法阻断与Warren质询IPO风险",
+        "date": "2026-10-29",
+        "author": "云原生观察",
+        "source": "https://kglegal.pl/en/act-on-artificial-intelligence-systems-the-most-important-regulations-and-provisions-coming-into-force-on-october-28-2026",
+        "categories": ["politics"],
+        "tags": ["ai-regulation", "eu-ai-act", "poland", "anthropic", "ipo", "policy"]
+      },
+      "content": "政策动态：波兰AI法案执法生效、Anthropic建议司法阻断与Warren质询IPO风险。波兰2026年7月3日《人工智能系统法》执行欧盟AI法案的条款于10月28日生效，KRiBSI成为市场监督机构与单一联络点，可提前7天通知后远程检查，存在重大风险时可缩短通知并现场检查，罚款可按整改、宽大协议或主动报告减免10%至90%；Anthropic在10月15日致加州州长Newsom的信中建议，政府审查认定模型构成严重风险时应可请求法院阻止发布，并认为强制“终止开关”可能带来虚假安全感，主张针对具体智能体或客户精准干预；参议员Warren在10月27日致信Anthropic CEO，要求11月3日前回答10组问题，引用S-1中逾90页风险因素，质询生存性风险、生物武器与自主黑客能力、治理及IPO定价，背景是公司六个月净亏损近810亿美元、IPO估值或达1.5万亿至2万亿美元。"
+    },
+    {
+      "category": "military",
+      "filename": "2026-10-29-military-news.md",
+      "front_matter": {
+        "layout": "post",
+        "title": "军事科技动态：俄乌无人机饱和攻击、GMLRS空中改靶、ARRW量产与反无人机穹顶",
+        "date": "2026-10-29",
+        "author": "云原生观察",
+        "source": "https://www.pravda.com.ua/eng/news/2026/10/28/8060025",
+        "categories": ["military"],
+        "tags": ["drone-warfare", "counter-uas", "precision-fires", "hypersonic", "ukraine", "defense"]
+      },
+      "content": "军事科技动态：俄乌无人机饱和攻击、GMLRS空中改靶、ARRW量产与反无人机穹顶。俄军在10月27日至28日夜间发射1枚Iskander-M/S-400弹道导弹及88架Shahed（38架喷气式）与Gerbera无人机，混合S-8000 Banderol/Dan-T巡航导弹和Parody诱饵，乌军截至08:00击落或干扰71架，8处遭命中、2处残骸坠落；Lockheed Martin与美陆军在白沙靶场首次用Strigo数据链和RIG-360对飞行中的GMLRS改靶并摧毁移动目标，该能力可扩展至增程GMLRS与PrSM；美空军授予Lockheed Martin 6.94亿美元ARRW生产合同，AGM-183A成为首款进入量产的美国空军高超音速导弹，配套Troy厂房新增4.7万平方英尺、产能扩大三倍；Rosoboronexport在俄非峰会推出多层“反无人机穹顶”，整合Pantsir、Verba、Citadel 30毫米炮、电子战与自动化指挥控制，并称激光与电磁脉冲系统即将量产。"
+    }
+  ],
+  "summary": "Generated 5 comprehensive daily news posts for October 29, 2026, covering cloud-native technology (Volcano v1.16 NamespaceQueue and fairshare scheduling, Akamai managed inference and WebAssembly agent sandbox, Cast AI autonomous Kubernetes optimization recognition), enterprise tech (Microsoft's $10B quarterly revenue from OpenAI, Alphabet Q3 cloud revenue doubling with negative free cash flow, Gemini 4 Carbon cybersecurity-focused frontier model), fintech (Guidewire's up to $2.1B acquisition of hyperexponential, Casap's $56M Series B for agentic fraud and dispute resolution, Hyphenate's $45M Series A for autonomous finance, Ripple's OCC national trust bank approval and near-$900M product revenue run rate), policy developments (Poland's AI Act enforcement powers taking effect, Anthropic's proposal for court-ordered blocking of risky models in California, Senator Warren's pre-IPO questions to Anthropic), and military technology (Russian mixed missile and 88-drone attack on Ukraine, first in-flight GMLRS retargeting test, $694M ARRW production contract and Alabama expansion, Russia's layered Anti-Drone Dome export concept). Each post includes verified source URLs, Chinese analysis of industry implications, and forward-looking perspectives.",
+  "stats": {
+    "total_posts": 5,
+    "posts_by_category": {
+      "cloud-native": 1,
+      "tech": 1,
+      "fintech": 1,
+      "politics": 1,
+      "military": 1
+    }
+  }
+}
